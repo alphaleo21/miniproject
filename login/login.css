@@ -1,0 +1,21 @@
+
+:root{
+    --font-family: "Roboto", sans-serif; /*variables for color and font style*/
+    --font-color: white;
+    --background-color: black;
+    --font-weight: bolder;
+}
+
+body{
+    margin: 0;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;   /*to arrange contents inside body to the center of webpage*/
+    justify-content: center;
+
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+}
