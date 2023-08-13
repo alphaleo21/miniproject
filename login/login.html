@@ -8,19 +8,41 @@
 </head>
 <body>
     <div class="container">
-        <div class="section">
-            <form action="login.php" method="post">
-                <label for="username">Username</label>
-                <br>
-                <input type="text" name="username" required>
-                <br>
-                <label for="password">Password</label>
-                <br>
-                <input type="password" name="password" required>
-                <br>
-                <input type="submit">
-            </form>
+        <div class="signinSection" id="signinSection">
+            Create an account ?<br>
+            <button class="signinbutton" id="showSignIn">Sign In</button>
+        </div>
+        <div class="form">
+            <div class="signinForm" id="inForm">
+                <h2>Sign In</h2>
+                <form action="signIn.php" method="post">
+                    <input type="text" name="username" placeholder="Username">
+                    <br>
+                    <br>
+                    <input type="password" name="password" placeholder="password">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="signupForm" id="upForm">
+                <h2>Sign Up</h2>
+                <form action="signUp.php" method="post">
+                    <input type="text" name="username" placeholder="Username">
+                    <br>
+                    <input type="email" name="email" placeholder="email">
+                    <br>
+                    <input type="password" name="password" placeholder="password">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>                
+        
+        <div class="signupSection" id="signupSection">
+            Already have an account ?<br>
+            <button class="signupbutton" id="showSignUp">Sign Up</button>
         </div>
     </div>
 </body>
+<script src="login.js"></script>
 </html>
