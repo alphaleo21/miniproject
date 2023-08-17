@@ -2,7 +2,7 @@
 :root{
     --font-family: "Roboto", sans-serif; /*variables for color and font style*/
     --font-color: rgb(51,51, 51);
-    --background-color: black;
+    --background-color: rgb(46, 40, 40);
     --font-weight: bolder;
     --backgroundForSection: rgb(211, 211, 211);
     --containerHeight: 40%;
@@ -23,10 +23,6 @@ body{
     font-weight: var(--font-weight);
 }
 
-.hidden{
-    display: none;
-}
-
 .container{
     display: flex;
     align-items: center;
@@ -43,10 +39,6 @@ body{
     align-items: center;
     justify-content: center;
 
-}
-
-.signinSection, .signupSection{
-    padding: 1em;
 }
 
 input{
