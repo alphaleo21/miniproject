@@ -1,63 +1,85 @@
 
 :root{
-    --font-family: "Roboto", sans-serif; /*variables for color and font style*/
-    --font-color: rgb(51,51, 51);
-    --background-color: rgb(46, 40, 40);
-    --font-weight: bolder;
-    --backgroundForSection: rgb(211, 211, 211);
-    --containerHeight: 40%;
-    --containerWidth: 30%;
+    --bodybg-color: #007BA7;
+    --containerbg-color: #FFFFFF;
+
+    --containerHeight: 80%;
+    --containerWidth: 80%;
 }
 
 body{
     margin: 0;
-    min-height: 100dvh;
-
+    height: 100dvh;
     display: flex;
     align-items: center;   /*to arrange contents inside body to the center of webpage*/
     justify-content: center;
+    background-color: var(--bodybg-color);
 
-    background-color: var(--background-color);
-    color: var(--font-color);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    color: var(--bodybg-color);
+    font-weight: bolder;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container{
+    background-color: var(--containerbg-color);
+    border-radius: 2em;
     display: flex;
-    align-items: center;
-    justify-content: center;
 
-    background-color: rgb(11, 130, 235);
+    align-items: center;
 }
+
+.container{
+    box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2); /*To give shadow to the container*/
+    margin: 2em;
+}
+
 .form{
-    background-color: var(--backgroundForSection);
-    padding: 2em;
+    margin: 1.5em;
+    flex-basis: 100%;  /*to equally divide the container for form and image*/
+    text-align: center;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.image{
+    flex-basis: 100%;   /*to equally divide the container for form and image*/
+    background-color: var(--bodybg-color);
+}
 
+
+img{
+    display: block;
+    max-width: 100%;    /*to alter the image according to screen size*/
 }
 
 input{
-    margin: .5em 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    font-weight: var(--font-weight);
-    font-size: 16px;
+    border: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(9, 154, 173);
+    margin: 0 0 1em 0;
+    padding: .5em;
+}
+input:focus{
+    font-weight: 500;
+    outline: none; 
+    border-radius: 1em;
+    border-bottom: 1px solid #007bff;;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.603);
+}
+.button{
+    width: 80%;
+    border: none;
+    background-color: #007BA7;  /*styling the login button*/
+    padding: 1em;
+    border-radius: 2em;
+    color: white;
 }
 
-input:focus{            /*pseudo class works when entering*/
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 52, 219, 0.5);
+@media (max-width: 60em){
+    .container{
+        flex-direction: column;
+    }
 }
-
-[type="submit"]{
-    float: right;
-}
-
