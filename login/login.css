@@ -87,8 +87,11 @@ input:focus{
         flex-direction: column;
         margin: 5em;
     }
+    .button{
+        padding: .5em;
+    }
     p{
         margin: 0;
-        padding: 0;
+        padding: 1em;
     }
 }
