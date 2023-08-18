@@ -17,6 +17,9 @@ body{
 
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+p{
+    margin: 0;
+}
 h1{
     color: var(--bodybg-color);
     font-weight: bolder;
@@ -76,10 +79,13 @@ input:focus{
     padding: 1em;
     border-radius: 2em;
     color: white;
+    margin-bottom: 0;
 }
 
-@media (max-width: 60em){
+@media (max-width: 60em) AND (orientation: portrait){
     .container{
         flex-direction: column;
+        width: 80%;
+        height: 80%;
     }
 }
