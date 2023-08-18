@@ -82,10 +82,9 @@ input:focus{
     margin-bottom: 0;
 }
 
-@media (max-width: 60em) AND (orientation: portrait){
+@media (max-width: 60em) AND (orientation: portrait){      /*for making webpage responsive*/
     .container{
         flex-direction: column;
-        width: 80%;
-        height: 80%;
+        margin: 5em;
     }
 }
