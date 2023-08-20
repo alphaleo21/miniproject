@@ -1,7 +1,36 @@
+:root{
+    --bgcolor: #007BA7;
+    --headingcolor: #FFFFFF;
+    --headingfont: 'Tilt Prism', cursive;
+    --headingsize: 5rem;
+
+    --paragraphcolor: #cccccc;
+    --paragraphsize: 2rem;
+    --paragraphfont: 'Roboto Condensed', sans-serif;
+}
+
+
 body,
 h1,
 h2,
 p{
     margin: 0;
     padding: 0;
+    background-color: var(--bgcolor);
+}
+h1
+{
+    font-family: var(--headingfont);
+    font-size: var(--headingsize);
+    color: var(--headingcolor);
+}
+p,h2{
+    font-family: var(--paragraphfont);
+    font-size: var(--paragraphsize);
+    color: var(--paragraphcolor);
+}
+
+header{
+    display: flex;
+    
 }
