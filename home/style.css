@@ -1,8 +1,8 @@
 :root{
-    --bgcolor: #007BA7;
+    --bgcolor: #4a5153;
     --headingcolor: #FFFFFF;
     --headingfont: 'Tilt Prism', cursive;
-    --headingsize: 5rem;
+    --headingsize: 4rem;
 
     --paragraphcolor: #cccccc;
     --paragraphsize: 2rem;
@@ -13,10 +13,14 @@
 body,
 h1,
 h2,
-p{
+p,
+a{
     margin: 0;
     padding: 0;
     background-color: var(--bgcolor);
+    text-decoration: none;
+    color: var(--paragraphcolor);
+
 }
 h1
 {
@@ -30,7 +34,29 @@ p,h2{
     color: var(--paragraphcolor);
 }
 
+.container{
+    margin-top: 7em;
+}
+
 header{
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.options{
+    display: flex;
+    gap: 2em;
+}
+#button-log-in{
+    font-family: var(--paragraphfont);
+    font-size: 1rem;
+    padding: 0 2em;
+    border-radius: 1em;
 }
