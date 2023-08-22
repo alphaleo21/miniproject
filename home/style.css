@@ -38,13 +38,13 @@ p,h2{
     margin-top: 7em;
 } */
 
+
 header{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1em;
     background-color: var(--bgcolor);
-
+    
     /* position: fixed;
     top: 0;
     left: 0;
@@ -53,12 +53,15 @@ header{
 }
 .logo{
     display: flex;
+    flex-basis: 100%;
+
 }
 
 .options{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    flex-basis: 100%;
 }
 .options h2{
     font-size: 2rem;
@@ -73,6 +76,13 @@ button{
     border-radius: 1em;
     cursor: pointer;
 }
+
+.material-symbols-outlined{
+    font-size: 32px;
+    align-self: center;
+    
+}
+    
 section{
     display: flex;
     align-items: center;
