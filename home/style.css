@@ -9,6 +9,10 @@
     --paragraphfont: 'Roboto Condensed', sans-serif;
 }
 
+body{
+    box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -19,7 +23,7 @@ a{
     background-color: var(--bgcolor);
     text-decoration: none;
     color: var(--paragraphcolor);
-
+    
 }
 
 h1
@@ -44,6 +48,7 @@ header{
     align-items: center;
     padding: 1em;
     background-color: var(--bgcolor);
+    position: relative;
     
     /* position: fixed;
     top: 0;
@@ -62,13 +67,23 @@ header{
     justify-content: flex-end;
     align-items: center;
     flex-basis: 100%;
+
+    transition: all 2s ease;
 }
 .options h2{
     font-size: 2rem;
     text-align: center;
 }
+.menu-button{
+    background-color: transparent;
+    border: none;
+    color: var(--headingcolor);
+    font-size: 2rem;
 
-button{
+}
+#button-log-in,
+#button-get-started
+{
     font-family: var(--paragraphfont);
     font-size: larger;
     margin: 1em;
@@ -77,12 +92,14 @@ button{
     cursor: pointer;
 }
 
-.material-symbols-outlined{
-    font-size: 32px;
+.name-log{
     align-self: center;
-    
 }
-    
+.menu{
+    display: none;
+    align-self: center;
+}
+
 section{
     display: flex;
     align-items: center;
@@ -110,4 +127,32 @@ section{
     font-size: 1rem;
     padding: .5em 2em;
     margin: 1em;
+}
+
+.menu:hover .option-menu-list{
+    display: block;
+    
+}
+
+.menu-button{
+    cursor: pointer;
+}
+
+@media (max-width: 40em){
+    .options{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .option-menu-list{
+        display: none;
+    }
+}
+
+@media (min-width: 40em){
+
+    .menu{
+        display: none;
+    }
 }
