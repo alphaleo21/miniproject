@@ -16,14 +16,15 @@ body{
 body,
 h1,
 h2,
-p,
-a{
+p
+{
     margin: 0;
     padding: 0;
     background-color: var(--bgcolor);
-    text-decoration: none;
     color: var(--paragraphcolor);
-    
+}
+a{
+    text-decoration: none;
 }
 
 h1
@@ -38,28 +39,16 @@ p,h2{
     color: var(--paragraphcolor);
 }
 
-/* .container{
-    margin-top: 7em;
-} */
-
-
 header{
     display: flex;
     align-items: center;
     padding: 1em;
     background-color: var(--bgcolor);
     position: relative;
-    
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100; */
 }
 .logo{
     display: flex;
     flex-basis: 100%;
-
 }
 
 .options{
@@ -67,22 +56,16 @@ header{
     justify-content: flex-end;
     align-items: center;
     flex-basis: 100%;
-
-    transition: all 2s ease;
 }
-.options h2{
+.options h2 a{
     font-size: 2rem;
     text-align: center;
+    padding-left: 1em;
+    color: var(--paragraphcolor);
 }
-.menu-button{
-    background-color: transparent;
-    border: none;
-    color: var(--headingcolor);
-    font-size: 2rem;
 
-}
-#button-log-in,
-#button-get-started
+#button-get-started,
+.login-button
 {
     font-family: var(--paragraphfont);
     font-size: larger;
@@ -91,13 +74,36 @@ header{
     border-radius: 1em;
     cursor: pointer;
 }
+.logo .name-log span{
+    font-size: 3em;
+    color: var(--headingcolor);
+}
 
 .name-log{
     align-self: center;
 }
-.menu{
+.option-menu-list{
+    list-style: none;
+    background-color: var(--paragraphcolor);
     display: none;
-    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+.option-menu-list.active{
+    display: block;
+}
+
+.option-menu-list a{
+    padding: 2em 3em;
+    text-decoration: none;
+    color: var(--bgcolor);
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
 }
 
 section{
@@ -129,30 +135,23 @@ section{
     margin: 1em;
 }
 
-.menu:hover .option-menu-list{
-    display: block;
-    
-}
-
-.menu-button{
-    cursor: pointer;
-}
 
 @media (max-width: 40em){
     .options{
         display: none;
     }
-    .menu{
+    .option-menu-list{
+        
+        flex-direction: column;
+        position: absolute;
+       
+        width: 80%;
+    }
+    .option-menu-list.active{
+        position: static;
         display: block;
     }
-    .option-menu-list{
-        display: none;
-    }
-}
-
-@media (min-width: 40em){
-
-    .menu{
-        display: none;
+    .menu-icon{
+        display: block;
     }
 }

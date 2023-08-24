@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <script src="home/java.js"></script>
 </head>
 <body>
     
@@ -30,19 +29,19 @@
                 </div>
                 <div class="options">
                     <h2><a href="">About Us</a></h2>
-                    <button id="button-log-in">LogIn</button>
+                    <button class="login-button"><a href="login/login.html">Log In</a></button>
                 </div>
-                <div class="menu">
-                    <div class="option-menu-list">
-                        <h2><a href="">About Us</a></h2>
-                        <button id="button-log-in">LogIn</button>
-                    </div>
-                    <button class="menu-button">
+
+                    <button class="menu-icon" id="menu-icon">
                         <span class="material-symbols-outlined">
-                            menu
-                            </span>
+                                menu
+                        </span>
                     </button>
-                </div>
+                    <div class="option-menu-list" id="option-menu-list">
+                        <a href="">About Us</a>
+                        <a href="login/login.html">Log In</a>
+                    </div>
+
             </header>
             <section>
                 <div class="description">
@@ -62,5 +61,6 @@
         </div>
     </div>
 
+    <script src="home/java.js"></script>
 </body>
 </html>
