@@ -42,6 +42,7 @@ p,h2{
 header{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 1em;
     background-color: var(--bgcolor);
     position: relative;
@@ -74,9 +75,21 @@ header{
     border-radius: 1em;
     cursor: pointer;
 }
+
+.menu button{
+    background-color: transparent;
+    border: none;
+    color: var(--headingcolor);
+}
+
+.menu button .material-symbols-outlined{
+    font-size: 3em;
+}
+
 .logo .name-log span{
     font-size: 3em;
     color: var(--headingcolor);
+    align-self: center;
 }
 
 .name-log{
@@ -89,16 +102,25 @@ header{
     padding: 0;
     margin: 0;
 }
-
+.option-menu-list{
+    position: absolute;       
+    z-index: 1;
+}   
 
 .option-menu-list.active{
     display: block;
 }
 
 .option-menu-list a{
-    padding: 2em 3em;
+    margin: 0;
+    padding: .5em 1em;
     text-decoration: none;
     color: var(--bgcolor);
+    font-weight: 700;
+}
+
+.option-menu-list a{
+    position: relative;
 }
 
 .menu-icon{
@@ -118,8 +140,8 @@ section{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-
-    height: 80vh;
+    height: 70vh;
+    margin: 2em 0;
     max-width: 80%;
 }
 .description h2{
@@ -137,19 +159,28 @@ section{
 
 
 @media (max-width: 40em){
+    h1{
+        font-size: 2em;
+    }
+    .menu button .material-symbols-outlined{
+        font-size: 2em;
+    }
+    
+    .logo .name-log span{
+        font-size: 2em;
+    }
     .options{
         display: none;
     }
     .option-menu-list{
-        
-        flex-direction: column;
-        position: absolute;
-       
-        width: 80%;
+        position: static;
     }
     .option-menu-list.active{
-        position: static;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        position: relative;
+        width: 100%;
     }
     .menu-icon{
         display: block;
