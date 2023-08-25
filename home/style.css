@@ -11,6 +11,7 @@
 
 body{
     box-sizing: border-box;
+    animation: loadingmenu .75s;
 }
 
 body,
@@ -45,7 +46,11 @@ header{
     justify-content: center;
     padding: 1em;
     background-color: var(--bgcolor);
-    position: relative;
+    flex-basis: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .logo{
     display: flex;
@@ -132,6 +137,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .description{
@@ -140,8 +147,7 @@ section{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 70vh;
-    margin: 2em 0;
+   
     max-width: 80%;
 }
 .description h2{
@@ -165,7 +171,10 @@ section{
     .menu button .material-symbols-outlined{
         font-size: 2em;
     }
-    
+    /* .description{
+        margin-top: 10%;
+        height: 60vh;
+    } */
     .logo .name-log span{
         font-size: 2em;
     }
@@ -176,6 +185,7 @@ section{
         position: static;
     }
     .option-menu-list.active{
+        animation: loadingmenu 2s;
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
@@ -184,5 +194,16 @@ section{
     }
     .menu-icon{
         display: block;
+    }
+}
+
+@keyframes loadingmenu {
+    from{
+        opacity: 0;
+        transform: translateY(-3em);
+        transition: ease-in-out;
+    }
+    to{
+        opacity: 1;
     }
 }
