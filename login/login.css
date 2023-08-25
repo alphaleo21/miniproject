@@ -16,6 +16,7 @@ body{
     background-color: var(--bodybg-color);
 
     font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: loadingmenu 2s;
 }
 p{
     margin: 0;
@@ -93,5 +94,16 @@ input:focus{
     p{
         margin: 0;
         padding: 1em;
+    }
+}
+
+@keyframes loadingmenu {
+    from{
+        opacity: 0;
+        transform: translateY(-2em);
+        transition: ease-in-out;
+    }
+    to{
+        opacity: 1;
     }
 }
