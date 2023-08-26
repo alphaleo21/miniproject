@@ -45,6 +45,7 @@ h1{
     margin: 1.5em;
     flex-basis: 100%;  /*to equally divide the container for form and image*/
     text-align: center;
+    
 }
 
 .image{
@@ -52,7 +53,9 @@ h1{
     background-color: var(--bodybg-color);
 }
 
-
+.container .image img{
+    border-radius: 2em;
+}
 img{
     display: block;
     max-width: 100%;    /*to alter the image according to screen size*/
@@ -87,13 +90,24 @@ input:focus{
     .container{
         flex-direction: column;
         margin: 5em;
+        max-width: 80%;
+        height: 90%;
     }
     .button{
         padding: .5em;
     }
+    .container{
+        border: none;
+    }
+    .container .image img{
+        border-radius: 2em;
+    }
     p{
         margin: 0;
         padding: 1em;
+    }
+    input{
+        font-size: 1em;
     }
 }
 
