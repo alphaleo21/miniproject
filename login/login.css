@@ -13,7 +13,7 @@ body{
     display: flex;
     align-items: center;   /*to arrange contents inside body to the center of webpage*/
     justify-content: center;
-    background-color: var(--bodybg-color);
+    background: linear-gradient(to left, #0074D9, #001F3F);
 
     font-family: Georgia, 'Times New Roman', Times, serif;
     animation: loadingmenu 2s;
@@ -50,11 +50,11 @@ h1{
 
 .image{
     flex-basis: 100%;   /*to equally divide the container for form and image*/
-    background-color: var(--bodybg-color);
+    background:transparent;
 }
 
 .container .image img{
-    border-radius: 2em;
+    border-radius: 2em 0 0 2em;
 }
 img{
     display: block;
@@ -86,12 +86,12 @@ input:focus{
     margin-bottom: 0;
 }
 
-@media (max-width: 60em) AND (orientation: portrait){      /*for making webpage responsive*/
+@media (max-width: 40em) AND (orientation: portrait){      /*for making webpage responsive*/
     .container{
         flex-direction: column;
         margin: 5em;
         max-width: 80%;
-        height: 90%;
+        height: 80%;
     }
     .button{
         padding: .5em;
@@ -100,7 +100,7 @@ input:focus{
         border: none;
     }
     .container .image img{
-        border-radius: 2em;
+        border-radius: 2em  2em 0 0;
     }
     p{
         margin: 0;
