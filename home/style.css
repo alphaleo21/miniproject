@@ -1,5 +1,5 @@
 :root{
-    --bgcolor: #4a5153;
+    --bgcolor: linear-gradient(to right, #0074D9, #001F3F);
     --headingcolor: #FFFFFF;
     --headingfont: 'Tilt Prism', cursive;
     --headingsize: 3rem;
@@ -11,7 +11,8 @@
 
 body{
     box-sizing: border-box;
-    animation: loadingmenu .75s;
+    animation: loadingmenu 3s;
+    background: linear-gradient(to right, #0074D9, #001F3F);
 }
 
 body,
@@ -21,7 +22,7 @@ p
 {
     margin: 0;
     padding: 0;
-    background-color: var(--bgcolor);
+    /* background-color: var(--bgcolor); */
     color: var(--paragraphcolor);
 }
 a{
@@ -45,12 +46,13 @@ header{
     align-items: center;
     justify-content: center;
     padding: 1em;
-    background-color: var(--bgcolor);
+    background: linear-gradient(to right, #0074D9, #001F3F);
     flex-basis: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 .logo{
     display: flex;
@@ -102,14 +104,13 @@ header{
 }
 .option-menu-list{
     list-style: none;
-    background-color: var(--paragraphcolor);
+    background-color: #0074D9;
     display: none;
     padding: 0;
     margin: 0;
 }
 .option-menu-list{
-    position: absolute;       
-    z-index: 1;
+    position: relative;      
 }   
 
 .option-menu-list.active{
@@ -118,13 +119,13 @@ header{
 
 .option-menu-list a{
     margin: 0;
-    padding: .5em 1em;
+    padding: .8em 1em;
     text-decoration: none;
-    color: var(--bgcolor);
+    color: var(--headingcolor);
     font-weight: 700;
 }
 
-.option-menu-list a{
+.option-menu-list.active{
     position: relative;
 }
 
@@ -141,13 +142,17 @@ section{
     height: 100vh;
 }
 
+#home-main{
+    animation: reload 2s;
+}
+
 .description{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-   
+    
     max-width: 80%;
 }
 .description h2{
@@ -163,6 +168,10 @@ section{
     margin: 1em;
 }
 
+.about-us{
+    background: linear-gradient(to left, #0074D9, #001F3F);
+    text-align: center;
+}
 
 @media (max-width: 40em){
     h1{
@@ -181,16 +190,14 @@ section{
     .options{
         display: none;
     }
-    .option-menu-list{
-        position: static;
-    }
     .option-menu-list.active{
         animation: loadingmenu 2s;
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
-        position: relative;
         width: 100%;
+        position: absolute;
+        top: 3em;
     }
     .menu-icon{
         display: block;
@@ -198,12 +205,28 @@ section{
 }
 
 @keyframes loadingmenu {
-    from{
+    0%{
         opacity: 0;
         transform: translateY(-3em);
         transition: ease-in-out;
     }
-    to{
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes reload {
+    0%{
+        opacity: 0;
+        transform: translateX(-3em);
+        transition: ease-in-out;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
         opacity: 1;
     }
 }
