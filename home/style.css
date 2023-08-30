@@ -9,6 +9,11 @@
     --paragraphfont: 'Roboto Condensed', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+}
+
 body{
     box-sizing: border-box;
     animation: loadingmenu 3s;
@@ -45,9 +50,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;
     background: linear-gradient(to right, #0074D9, #001F3F);
     flex-basis: 100%;
+    padding: .5em;
     position: fixed;
     top: 0;
     left: 0;
@@ -134,6 +139,7 @@ header{
     cursor: pointer;
 }
 
+
 section{
     display: flex;
     align-items: center;
@@ -170,12 +176,35 @@ section{
 
 .about-us{
     background: linear-gradient(to left, #0074D9, #001F3F);
-    text-align: center;
+    animation: loadingmenu 2s;
+    display: flex;
+    padding: 2em;
+    height: fit-content;
+}
+.content-in-about-us{
+    padding: 2em;
+    width: 80%;
+    font-size: 1.333rem;
+}
+.content-in-about-us h2{
+    color: var(--headingcolor);
+    padding: 1rem 0;
+}
+.content-in-about-us p{
+    font-size: 1.333rem;
+}
+.content-in-about-us ul h3{
+    color: var(--headingcolor);
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 40em){
     h1{
         font-size: 2em;
+    }
+    p{
+        font-size: 1em;
     }
     .menu button .material-symbols-outlined{
         font-size: 2em;
@@ -191,7 +220,7 @@ section{
         display: none;
     }
     .option-menu-list.active{
-        animation: loadingmenu 2s;
+        animation: loadingmenu 1s;
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
@@ -201,6 +230,13 @@ section{
     }
     .menu-icon{
         display: block;
+    }
+    .about-us p{
+        font-size: 1rem;
+    }
+    .content-in-about-us{
+        width: 95%;
+        font-size: 1rem;
     }
 }
 
