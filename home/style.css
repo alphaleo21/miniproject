@@ -1,5 +1,5 @@
 :root{
-    --bgcolor: linear-gradient(to right, #0074D9, #001F3F);
+    --bgcolor: #000022;;
     --headingcolor: #FFFFFF;
     --headingfont: 'Tilt Prism', cursive;
     --headingsize: 3rem;
@@ -17,7 +17,7 @@ html{
 body{
     box-sizing: border-box;
     animation: loadingmenu 3s;
-    background: linear-gradient(to right, #0074D9, #001F3F);
+    background: var(--bgcolor);
 }
 
 body,
@@ -46,18 +46,50 @@ p,h2{
     color: var(--paragraphcolor);
 }
 
+.container::before{
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    background: rgba(255,255,255,.07);
+    left: -20vmin;
+    top: -20vmin;
+    z-index: 1;
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: moveshape 5s linear infinite alternate;
+}
+
+.container::after{
+    content: "";
+    width: 40vmax;
+    height: 40vmax;
+    position: absolute;
+    background: rgba(255,255,255,.07);
+    right: -30vmin;
+    bottom: -20vmin;
+    z-index: 1;
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: movedown 5s linear infinite alternate;
+}
+
 header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #0074D9, #001F3F);
+    background: var(--bgcolor);
     flex-basis: 100%;
     padding: .5em;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 1;
 }
 .logo{
     display: flex;
@@ -80,12 +112,23 @@ header{
 #button-get-started,
 .login-button
 {
-    font-family: var(--paragraphfont);
-    font-size: larger;
-    margin: 1em;
-    padding: .5em 2em;
-    border-radius: 1em;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#button-get-started:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .menu button{
@@ -175,7 +218,7 @@ section{
 }
 
 .about-us{
-    background: linear-gradient(to left, #0074D9, #001F3F);
+    background: var(--bgcolor);
     animation: loadingmenu 2s;
     display: flex;
     padding: 2em;
@@ -264,5 +307,25 @@ section{
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes moveshape{
+    from{
+        left: -2em;
+        transform: translateY(0);
+    }
+    to{
+        left: 2em;
+        transform: translateY(100px);
+    }
+}
+@keyframes movedown{
+    from{
+        right: -.2em;
+        transform: translateY(0);
+    }
+    to{
+        right: 5em;
+        transform: translateY(100px);
     }
 }
