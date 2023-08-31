@@ -16,7 +16,7 @@ html{
 
 body{
     box-sizing: border-box;
-    animation: loadingmenu 3s;
+    animation: loadingmenu 2s;
     background: var(--bgcolor);
 }
 
@@ -84,6 +84,7 @@ header{
     justify-content: center;
     background: var(--bgcolor);
     flex-basis: 100%;
+    animation: loadingmenu 1s;
     padding: .5em;
     position: fixed;
     top: 0;
@@ -94,6 +95,8 @@ header{
 .logo{
     display: flex;
     flex-basis: 100%;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+
 }
 
 .options{
@@ -105,7 +108,7 @@ header{
 .options h2 a{
     font-size: 2rem;
     text-align: center;
-    padding-left: 1em;
+    padding: 1em;
     color: var(--paragraphcolor);
 }
 
@@ -114,7 +117,19 @@ header{
 {
     display: inline-block;
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 1em;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.login-button a{
+    display: inline-block;
+    font-size: 1em;
     border: none;
     background-color: #3498db;
     color: #fff;
@@ -125,10 +140,23 @@ header{
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
+.logo:hover{
+    transform: scale(1.02);
+}
+
 #button-get-started:hover{
     background-color: #2980b9;
     transform: scale(1.05);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.options h2:hover{
+    transform: scale(1.05);
 }
 
 .menu button{
@@ -191,9 +219,9 @@ section{
     height: 100vh;
 }
 
-#home-main{
+/* #home-main{
     animation: reload 2s;
-}
+} */
 
 .description{
     display: flex;
@@ -262,6 +290,7 @@ section{
     .options{
         display: none;
     }
+
     .option-menu-list.active{
         animation: loadingmenu 1s;
         display: flex;
@@ -299,36 +328,24 @@ section{
         opacity: 1;
     }
 }
-@keyframes reload {
-    0%{
-        opacity: 0;
-        transform: translateX(-3em);
-        transition: ease-in-out;
-    }
-    50%{
-        opacity: .5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+
 @keyframes moveshape{
     from{
         left: -2em;
         transform: translateY(0);
     }
     to{
-        left: 2em;
-        transform: translateY(100px);
+        left: 4em;
+        transform: translateY(10em);
     }
 }
 @keyframes movedown{
     from{
-        right: -.2em;
+        right: 0;
         transform: translateY(0);
     }
     to{
         right: 5em;
-        transform: translateY(100px);
+        transform: translateY(10em);
     }
 }
