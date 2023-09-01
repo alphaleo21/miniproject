@@ -22,14 +22,29 @@
         <div class="contents">
             <div class="form">
                 <form action="" method="POST">
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="batch" placeholder="Batch" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="password" name="repeat-password" placeholder="Confirm Password">
+                    <div class="input-container">
+                        <input type="text" name="username" placeholder="" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" placeholder="" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="batch"  placeholder="2021-24" required>
+                        <label for="batch">Batch</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" placeholder="" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="repeat-password" placeholder="" required>
+                        <label for="repeat-password">Confirm Password</label>
+                    </div>
                 </form>
             </div>
-            <h3>Already have an account <a href="../login/login.html">Log In</a></h3>
+            <h3>Already have an account <a href="../login/login.html">LogIn</a></h3>
         </div>
     </div>
 </body>
