@@ -8,16 +8,76 @@ font-family: 'Roboto Condensed', sans-serif; */
     --heading-font: 'Black Ops One', cursive;
     --heading-size: 2rem;
     --title-font: 'Roboto Condensed', sans-serif;
+
+    --body-bgcolor: #000022;
+    --heading-color: #FFFFFF;
+    --container-bgcolor: rgba(255, 255, 255, 0.116);
+    --input-color: #080863;
 }
 
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 body{
     box-sizing: border-box;
+    height: 100dvh;
+    background-color: var(--body-bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 h2{
     font-family: var(--heading-font);
     font-size: var(--heading-size);
+    color: var(--heading-color);
+}
+
+.container{
+    background-color: var(--container-bgcolor);
+    min-height: 50%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 3em;
+    padding: 2em;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--heading-color);
+    margin: 1em ;
+    margin-bottom: 1em;
+}
+
+.contents{
+    /* min-width: 80%; */
+    min-width: 80%;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 1em;
+    margin: .5em;
+    border-radius: 1em;
+    border: none;
+    font-size: 1rem;
+    color: var(--input-color);
+    /* font-family: var(--title-font); */
+}
+input::placeholder{
+    color: var(--input-color);
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+}
+input:focus{
+    border: none;
 }
