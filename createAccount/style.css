@@ -80,7 +80,7 @@ h2{
     border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
     animation: movedown 5s linear infinite alternate;
 }
-.logo{
+.logo a{
     position: absolute;
     top: 0;
     left: 0;
