@@ -61,17 +61,17 @@ h2{
 }
 
 .contents{
-    /* min-width: 80%; */
     min-width: 80%;
 }
 
 .input-container{
     position: relative;
-    /* margin-top: 2rem; */
+    display: flex;
+   
 }
 .input-container input{
     width: 100%;
-    padding: 1em 2em;
+    padding: 1em 1em;
     box-sizing: border-box;
 }
 .input-container label{
@@ -100,12 +100,16 @@ h2{
     font-size: 1em;
 }
 
-.form form{
+.form form{ 
+    /* animation: b ; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 input{
-    padding: 1em;
+    padding-block: 1em;
+    padding-inline: 3em;
     margin: .5em;
     border-radius: 1em;
     border: none;
@@ -113,6 +117,18 @@ input{
     color: var(--input-color);
     background-color: var(--container-bgcolor);
     font-family: var(--title-font);
+    transition: transform 0.3s;
+}
+
+input .submit{
+   
+   align-self: center;
+   justify-self: center;
+}
+input.submit:hover{
+    transform: scale(1.05);
+    background-color: blueviolet;
+    cursor: pointer;
 }
 
 .contents h3{
@@ -125,6 +141,11 @@ input{
     font-family: var(--heading-font);
     font-weight: 900;
     font-size: 1.3em;
+    transition: color 0.3s, transform 0.4s;
+}
+h3 a:hover{
+    
+    color: rgba(132, 0, 255, 0.959);
 }
 
 @keyframes loadingmenu {
