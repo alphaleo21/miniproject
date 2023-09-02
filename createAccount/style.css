@@ -38,7 +38,7 @@ h2{
 .container{
     /* background-color: var(--container-bgcolor); */
     min-height: 50%;
-    min-width: 50%;
+    /* min-width: 50%; */
     margin-inline: 1em;
     display: flex;
     flex-direction: column;
@@ -46,6 +46,7 @@ h2{
     /* justify-content: center; */
     border-radius: 2em;
     padding: 2em;
+    box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2);
 }
 .logo{
     position: absolute;
