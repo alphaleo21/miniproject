@@ -54,6 +54,37 @@ h2{
     margin: 2em;
 }
 
+.container::before{
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    background: rgba(255,255,255,.041);
+    left: 2vmin;
+    top: 3vmin;
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: moveshape 5s linear infinite alternate;
+}
+
+.container::after{
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.041);
+    right: 2vmin;
+    bottom: 2vmin;
+    /* z-index: 1; */
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: movedown 5s linear infinite alternate;
+}
+
 .form{
     margin: 1.5em;
     flex-basis: 100%;  /*to equally divide the container for form and image*/
@@ -162,6 +193,13 @@ h3 a:hover{
     input{
         font-size: 1em;
     }
+    .container::after{
+        display: none;
+    }
+    .container::before{
+        display: none;
+    }
+
 }
 
 @keyframes loadingmenu {
@@ -172,5 +210,25 @@ h3 a:hover{
     }
     to{
         opacity: 1;
+    }
+}
+@keyframes moveshape{
+    from{
+        left: 2em;
+        transform: translateY(0);
+    }
+    to{
+        left: 4em;
+        transform: translateY(10em);
+    }
+}
+@keyframes movedown{
+    from{
+        right: 0;
+        transform: translateY(0);
+    }
+    to{
+        right: 5em;
+        transform: translateY(1em);
     }
 }

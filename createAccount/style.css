@@ -42,11 +42,43 @@ h2{
     margin-inline: 1em;
     display: flex;
     flex-direction: column;
+    
+    z-index: 1;
     align-items: center;
     /* justify-content: center; */
     border-radius: 2em;
     padding: 2em;
     box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2);
+}
+.container::before{
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    background: rgba(255,255,255,.041);
+    left: 2vmin;
+    top: 3vmin;
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: moveshape 5s linear infinite alternate;
+}
+
+.container::after{
+    content: "";
+    width: 30vmax;
+    height: 30vmax;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.041);
+    right: 2vmin;
+    bottom: 2vmin;
+    /* z-index: 1; */
+    will-change: border-radius,transform;
+    transform-origin: 55% 55%;
+    pointer-events: none;
+    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
+    animation: movedown 5s linear infinite alternate;
 }
 .logo{
     position: absolute;
@@ -149,6 +181,15 @@ h3 a:hover{
     color: rgba(132, 0, 255, 0.959);
 }
 
+@media (max-width: 40em){
+    .container::after{
+        display: none;
+    }
+    .container::before{
+        display: none;
+    }
+}
+
 @keyframes loadingmenu {
     0%{
         opacity: 0;
@@ -160,5 +201,25 @@ h3 a:hover{
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes moveshape{
+    from{
+        left: 2em;
+        transform: translateY(0);
+    }
+    to{
+        left: 4em;
+        transform: translateY(10em);
+    }
+}
+@keyframes movedown{
+    from{
+        right: 0;
+        transform: translateY(0);
+    }
+    to{
+        right: 5em;
+        transform: translateY(1em);
     }
 }
