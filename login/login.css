@@ -1,39 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed&display=swap');
 
 :root{
-    --bodybg-color: #007BA7;
-    --containerbg-color: #FFFFFF;
+    --heading-font: 'Black Ops One', cursive;
+    --heading-size: 2rem;
+    --title-font: 'Roboto Condensed', sans-serif;
 
-    --containerHeight: 80%;
-    --containerWidth: 80%;
+    --body-bgcolor: #000022;
+    --heading-color: #FFFFFF;
+    --container-bgcolor: rgba(255, 255, 255, 0.116);
+    --input-color: #f3f3f5;
 }
-
+*{
+    text-decoration: none;
+}
 body{
     margin: 0;
     height: 100dvh;
     display: flex;
     align-items: center;   /*to arrange contents inside body to the center of webpage*/
     justify-content: center;
-    background: linear-gradient(to left, #0074D9, #001F3F);
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: var(--body-bgcolor);
+    box-sizing: border-box;
     animation: loadingmenu 2s;
+    position: relative;
 }
-p{
-    margin: 0;
-}
-h1{
-    color: var(--bodybg-color);
-    font-weight: bolder;
-    font-size: 2em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+h2{
+    font-family: var(--heading-font);
+    font-size: var(--heading-size);
+    color: var(--heading-color);
 }
 
 .container{
-    background-color: var(--containerbg-color);
     border-radius: 2em;
     display: flex;
-
     align-items: center;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1em;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--heading-color);
 }
 
 .container{
@@ -48,42 +61,82 @@ h1{
     
 }
 
-.image{
-    flex-basis: 100%;   /*to equally divide the container for form and image*/
-    background:transparent;
+.input-container{
+    position: relative;
+    display: flex;
+   
+}
+.input-container input{
+    width: 100%;
+    padding: 1em 1em;
+    box-sizing: border-box;
+}
+.input-container label{
+    position: absolute;
+    left: 2em;
+    top: 1.5em;
+    transition: 0.2s;
+    pointer-events: none;
+
+    color: var(--input-color);
+    font-family: var(--title-font);
+    font-size: 1.3rem;
 }
 
-.container .image img{
-    border-radius: 2em 0 0 2em;
+.input-container input::placeholder{
+    opacity: 0;
 }
-img{
-    display: block;
-    max-width: 100%;    /*to alter the image according to screen size*/
+.input-container input:focus::placeholder{
+    opacity: 1;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label{
+    top: .7em;
+    left: 1.5em;
+    font-size: 1em;
+    font-family: var(--title-font);
 }
 
 input{
-    border: none;
-    font-size: 1.4em;
-    font-weight: bold;
-    border-bottom: 1px solid rgb(9, 154, 173);
-    margin: 0 0 1em 0;
-    padding: .5em;
-}
-input:focus{
-    font-weight: 500;
-    outline: none; 
+    padding-block: 1em;
+    padding-inline: 3em;
+    margin: .5em;
     border-radius: 1em;
-    border-bottom: 1px solid #007bff;
-    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.603);
-}
-.button{
-    width: 80%;
     border: none;
-    background-color: #007BA7;  /*styling the login button*/
-    padding: 1em;
-    border-radius: 2em;
-    color: white;
-    margin-bottom: 0;
+    font-size: 1.3rem;
+    color: var(--input-color);
+    background-color: var(--container-bgcolor);
+    font-family: var(--title-font);
+    transition: transform 0.3s;
+}
+
+input .submit{
+   
+    align-self: center;
+    justify-self: center;
+ }
+ input.submit:hover{
+     transform: scale(1.05);
+     background-color: blueviolet;
+     cursor: pointer;
+ }
+
+ .form h3{
+    color: var(--heading-color);
+    font-family: var(--title-font);
+    text-align: center;
+}
+.form h3 a{
+    color: var(--input-color);
+    font-family: var(--heading-font);
+    font-weight: 900;
+    font-size: 1.3em;
+    transition: color 0.3s, transform 0.4s;
+}
+h3 a:hover{
+    
+    color: rgba(132, 0, 255, 0.959);
 }
 
 @media (max-width: 40em) AND (orientation: portrait){      /*for making webpage responsive*/
