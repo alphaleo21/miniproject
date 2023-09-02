@@ -35,6 +35,7 @@ h2{
 
 .container{
     border-radius: 2em;
+    margin: 1em;
     display: flex;
     align-items: center;
     background-color: var(--body-bgcolor);
@@ -90,10 +91,7 @@ h2{
 }
 
 .form{
-    margin: 1.5em;
-    flex-basis: 100%;  /*to equally divide the container for form and image*/
     text-align: center;
-    
 }
 
 .input-container{
@@ -108,7 +106,7 @@ h2{
 }
 .input-container label{
     position: absolute;
-    left: 2em;
+    left: 1em;
     top: 1.5em;
     transition: 0.2s;
     pointer-events: none;
@@ -176,9 +174,8 @@ h3 a:hover{
 
 @media (max-width: 40em) AND (orientation: portrait){      /*for making webpage responsive*/
     .container{
-        flex-direction: column;
         margin: 5em;
-        max-width: 90%;
+        width: 90%;
     }
     .button{
         padding: .5em;
