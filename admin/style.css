@@ -22,19 +22,19 @@ body{
 }
 .container{
     background-color: var(--container-bgcolor);
-    height: 100%;
+    height: 100dvh;
 }
 
 .header{
     display: flex;
-    position: relative;
+    position: absolute;
     background-color: var(--body-bgcolor);
     padding: 1em;
     width: 100%;
 }
 
 .menu{
-    display: flex;
+    display: none;
 }
 
 .header button{
@@ -50,8 +50,6 @@ button .material-symbols-outlined{
 .logo{
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-inline: .5em;
     flex: 1 1 auto;
 }
 .logo h1{
@@ -89,4 +87,44 @@ input:focus{
     align-items: center;
     justify-content: flex-end;
     flex: 1 1 auto;
+}
+.dashboard{
+    background-color: var(--body-bgcolor);
+    display: flex;
+    padding-top: 5em;
+    width: 20%;
+    height: 100dvh;
+}
+.dashboard ul{
+    width: 100%;
+}
+.dashboard ul li{
+    display: flex;
+    padding: .5em;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.4s, transform 0.3s;
+}
+a{
+    color: var(--text-color);
+    transition: transform 0.3s;
+}
+a:hover{
+    transform: scale(1.05);
+}
+li:hover{
+    background-color: var(--container-bgcolor);
+}
+
+@media (max-width: 45em){
+    .dashboard{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
 }
