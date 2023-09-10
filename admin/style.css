@@ -55,6 +55,9 @@ button .material-symbols-outlined{
 .logo h1{
     font-family: var(--heading-font);
 }
+.current-user h2{
+    font-family: var(--heading-font);
+}
 
 .logo .material-symbols-outlined{
     font-size: 2em;
@@ -88,17 +91,25 @@ input:focus{
     justify-content: flex-end;
     flex: 1 1 auto;
 }
-.dashboard{
+
+.section{
+    display: flex;
+    padding-top: 4.5em;
+    height: 100%;
+}
+
+.sidebar{
     background-color: var(--body-bgcolor);
     display: flex;
-    padding-top: 5em;
     width: 20%;
-    height: 100dvh;
+    height: 100%;
+    overflow-x: hidden;
+    transition: width 0.5s ease-in-out;
 }
-.dashboard ul{
+.sidebar ul{
     width: 100%;
 }
-.dashboard ul li{
+.sidebar ul li{
     display: flex;
     padding: .5em;
     font-size: 1.5rem;
@@ -116,15 +127,33 @@ a:hover{
 li:hover{
     background-color: var(--container-bgcolor);
 }
+.contents{
+    width: 80%;
+}
+.sidebar.active{
+    width: 250px;
+}
 
 @media (max-width: 45em){
-    .dashboard{
-        display: none;
+    .sidebar{
+        width: 0;
     }
     .search{
         display: none;
     }
     .menu{
         display: block;
+    }
+    .contents{
+        width: 100%;
+    }
+    .sidebar.active{
+        width: 40%;
+    }
+    .logo h1{
+        display: none;
+    }
+    li a{
+        font-size: 1rem;
     }
 }
