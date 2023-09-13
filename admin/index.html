@@ -26,13 +26,6 @@
                 <span class="material-symbols-outlined">hive</span>
                 <h1>CodeHive</h1>
             </div>
-            <div class="search" id="search">
-                <input type="search" name="search" placeholder="Search">
-                <span class="material-symbols-outlined">search</span>
-            </div>
-            <div class="search-button" id="search-button">
-                <span class="material-symbols-outlined">search</span>
-            </div>
             <div class="current-user">
                 <h2 id="current-user">A</h2>
             </div>
@@ -40,17 +33,37 @@
         <div class="section">
             <div class="sidebar" id="sidebar">
                 <ul class="sidebar-list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Notifications</a></li>
-                    <li><a href="">Idea Submission</a></li>
+                    <li><a  href="#projects">Projects</a></li>
+                    <li><a  href="#search-files">Search</a></li>
+                    <li><a  href="#notification">Notifications</a></li>
+                    <li><a  href="#idea">Idea Submission</a></li>
                 </ul>
             </div>
-            <div class="contents">
-               
+            <div class="contents" id="contents">
+               <div class="projects link" id="projects">
+                Projects Overview: 
+                    Lists the projects associated with the user.
+                    Each project card displays the project title, brief description, status (e.g., 
+                    In Progress, Completed), and a "View Details" button.
+               </div>
+               <div class="search-files link" id="search-files">
+                Search and Discovery:
+                Offers a search bar and filters for finding new projects or mentors.
+                Results are displayed in a list or grid format.
+               </div>
+               <div class="notification link" id="notification">
+                Notification Center:
+                Lists recent notifications, including project approvals, new messages, and updates.
+                Allows users to mark notifications as read or delete them.
+               </div>
+                <div class="idea link" id="idea">
+                Project Idea Submission:
+                If the user is a student, a section allows them to submit new project ideas.
+                Includes a form with fields for the project title, description, objectives, and file uploads.
+                </div>
             </div>
         </div>
     </div>
-    <script src="java.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

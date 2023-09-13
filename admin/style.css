@@ -10,15 +10,26 @@
     --heading-size: 2rem;
     --title-font: 'Roboto Condensed', sans-serif;
 
-    --body-bgcolor: #000022;
+    --body-bgcolor:  #000022;
     --text-color: #FFFFFF;
     --container-bgcolor: rgba(255, 255, 255, 0.137);
     --input-color: #f3f3f5;
+}
+
+html{
+    font-size: 1.5vw;
+
+     scroll-behavior: smooth;
+    scroll-padding: 2rem;
 }
 body{
     background-color: var(--body-bgcolor);
     color: var(--text-color);
     height: 100dvh;
+    font-family: var(--title-font);
+}
+h1{
+    font-size: 1.5rem;
 }
 .container{
     background-color: var(--container-bgcolor);
@@ -48,7 +59,7 @@ body{
 }
 
 button .material-symbols-outlined{
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 .logo{
@@ -64,50 +75,24 @@ button .material-symbols-outlined{
 }
 
 .logo .material-symbols-outlined{
-    font-size: 2em;
+    font-size: 2rem;
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 3 1 auto;
-    background-color: var(--container-bgcolor);
-    border-radius: 2em;
-}
-.search input{
-    background-color: transparent;
-    border: none;
-    width: 90%;
-    height: 100%;
-    padding-inline-start: .5em;
-    font-size: 1.2rem;
-}
-input:focus{
-    border: none;
-    font-size: 1.2rem;
-    outline: none;
-    color: var(--input-color);
-}
-
-.search-button{
-    display: none;
-}
 
 .current-user{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex: 0 1 auto;
+    justify-content: center;
     background-color: var(--container-bgcolor);
-    margin-left: 1em;
+    margin-inline-start: 1em;
     padding-inline: 1em;
     border-radius: 50%;
+
 }
 
 .section{
     display: flex;
-    padding-top: 4.3em;
+    padding-top: 4em;
     height: 100%;
 }
 
@@ -125,7 +110,7 @@ input:focus{
 .sidebar ul li{
     display: flex;
     padding: .5em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     transition: background-color 0.4s, transform 0.3s;
@@ -141,10 +126,23 @@ li:hover{
     background-color: var(--container-bgcolor);
 }
 .contents{
+    /* display: flex; */
+    flex-direction: column;
     width: 80%;
+    text-align: center;
+    padding: 2em;
+    gap: 1em;
+    overflow: scroll;
+    
+}
+.contents .link{
+    height: 100dvh;
 }
 
 @media (max-width: 45em){
+    html{
+        font-size: 1rem;
+    }
     .sidebar{
         width: 0;
     }
@@ -163,6 +161,7 @@ li:hover{
     }
     .search.add{
         width: 12em;
+        transition: opacity 0.5s ease-in-out;
         opacity: 1;
     }
     .menu{
