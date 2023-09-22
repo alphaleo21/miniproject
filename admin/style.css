@@ -17,10 +17,7 @@
 }
 
 html{
-    font-size: 1.5vw;
-
-     scroll-behavior: smooth;
-    scroll-padding: 2rem;
+    font-size: 1.2vw;
 }
 body{
     background-color: var(--body-bgcolor);
@@ -87,12 +84,11 @@ button .material-symbols-outlined{
     margin-inline-start: 1em;
     padding-inline: 1em;
     border-radius: 50%;
-
 }
 
 .section{
     display: flex;
-    padding-top: 4em;
+    padding-top: 3.8em;
     height: 100%;
 }
 
@@ -110,7 +106,7 @@ button .material-symbols-outlined{
 .sidebar ul li{
     display: flex;
     padding: .5em;
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     transition: background-color 0.4s, transform 0.3s;
@@ -132,11 +128,6 @@ li:hover{
     text-align: center;
     padding: 2em;
     gap: 1em;
-    overflow: scroll;
-    
-}
-.contents .link{
-    height: 100dvh;
 }
 
 @media (max-width: 45em){
