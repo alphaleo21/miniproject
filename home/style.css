@@ -14,6 +14,20 @@ html{
     scroll-padding: 2rem;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--bgcolor);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color:  rgba(255,255,255,.07);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid var(--bgcolor);  /* creates padding around scroll thumb */
+  }
+
 body{
     box-sizing: border-box;
     animation: loadingmenu 2s;
