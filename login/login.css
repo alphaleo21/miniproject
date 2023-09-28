@@ -174,8 +174,7 @@ h3 a:hover{
 
 @media (max-width: 40em) AND (orientation: portrait){      /*for making webpage responsive*/
     .container{
-        margin: 5em;
-        width: 90%;
+        margin: 1em;  
     }
     .button{
         padding: .5em;
@@ -189,7 +188,9 @@ h3 a:hover{
     .container::before{
         display: none;
     }
-
+    .logo h2{
+        font-size: 2em;
+    }
 }
 
 @keyframes loadingmenu {

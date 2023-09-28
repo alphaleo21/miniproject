@@ -188,6 +188,17 @@ h3 a:hover{
     .container::before{
         display: none;
     }
+    .input-container label{
+        font-size: 1em;
+        position: absolute;
+        left: 1.5em;
+        top: 2.1em;
+        transition: 0.2s;
+        pointer-events: none;
+    }
+    .logo h2{
+        font-size: 2em;
+    }
 }
 
 @keyframes loadingmenu {
