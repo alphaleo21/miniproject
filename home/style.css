@@ -1,12 +1,14 @@
 :root{
     --bgcolor: #000022;
     --headingcolor: #FFFFFF;
-    --headingfont: 'Tilt Prism', cursive;
-    --headingsize: 3rem;
+    --headingfont: 'Black Ops One', cursive;
+    --headingsize: 2rem;
 
     --paragraphcolor: #cccccc;
     --paragraphsize: 2rem;
     --paragraphfont: 'Roboto Condensed', sans-serif;
+
+    --button_color: #9036aca9;
 }
 
 html{
@@ -65,7 +67,7 @@ p,h2{
     width: 30vmax;
     height: 30vmax;
     position: absolute;
-    background: rgba(255,255,255,.07);
+    background: rgba(255, 255, 255, 0.07);
     left: -20vmin;
     top: -20vmin;
     z-index: 1;
@@ -133,7 +135,7 @@ header{
     padding: 12px 24px;
     font-size: 1em;
     border: none;
-    background-color: #3498db;
+    background-color: var(--button_color);
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -145,7 +147,7 @@ header{
     display: inline-block;
     font-size: 1em;
     border: none;
-    background-color: #3498db;
+    background-color: var(--button_color);
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -251,7 +253,7 @@ section{
     color: var(--headingcolor);
 }
 .description p{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .description button{
     font-size: 1rem;
@@ -285,15 +287,13 @@ section{
 }
 
 @media (max-width: 40em){
-    h1{
-        font-size: 2em;
+    .description h2{
+        font-size: 1.5em;
     }
-    p{
+    .description p{
         font-size: 1em;
     }
-    .menu button .material-symbols-outlined{
-        font-size: 2em;
-    }
+    
     /* .description{
         margin-top: 10%;
         height: 60vh;
