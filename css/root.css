@@ -1,0 +1,16 @@
+:root{
+    --heading-font: 'Black Ops One', cursive;
+    --heading-size: 2rem;
+    --title-font: 'Roboto Condensed', sans-serif;
+
+    --body-bgcolor: #000022;
+    --heading-color: #FFFFFF;
+    --container-bgcolor: rgba(255, 255, 255, 0.116);
+    --input-color: #f3f3f5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
