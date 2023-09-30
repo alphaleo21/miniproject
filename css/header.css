@@ -1,0 +1,5 @@
+@import 'root.css';
+
+html{
+    font-family: var(--heading-font);
+}
