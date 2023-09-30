@@ -2,4 +2,60 @@
 
 html{
     font-family: var(--heading-font);
+    color: var(--heading-color);
+}
+h2{
+    font-size: 2em;
+}
+h4{
+    font-family: var(--title-font);
+}
+
+header{
+    background-color: var(--body-bgcolor);
+    display: flex;
+    align-items: center;
+    padding: 1.3em 2em;
+}
+.right-align{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: end;
+}
+.logout-icon{
+    align-self: center;
+    padding: 6px 2px 2px 2px;
+    padding-left: .5em;
+}
+.logout-icon img{
+    width: 28px;
+}
+.current-user{
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+}
+.current-user img{
+    width: 35px;
+}
+
+@media (max-width: 40em){
+    img{
+        width: 25px;
+    }
+    .logo h2{
+        padding-top: 3px;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    header{
+        padding: .5em 1em;
+    }
+    .logout-icon{
+        display: none;
+    }
+    .current-user img{
+        width: 25px;
+    }
 }
