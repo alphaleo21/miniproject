@@ -125,6 +125,9 @@ header h2{
     justify-content: center;
     align-items: center;
 }
+img{
+    width: 25px;
+}
 .user img{
     width: 32px;
 }
@@ -242,4 +245,45 @@ header h2{
     100%{
         transform: translateX(0);
     }
+}
+
+.main h2{
+    font-weight: 100;
+}
+.main .h-divider{
+    background-color: black;
+    margin-inline: .1em;
+}
+
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.project-box{
+    max-width: 300px;
+    min-width: 280px;
+    background-color: var(--body-bgcolor);
+    border-radius: 12px;
+    padding: 1em;
+}
+.project-box h3{
+    font-weight: 200;
+    font-family: var(--heading-font);
+    color: white;
+}
+.project-box p{
+    color: white;
+    font-family: var(--title-font);
+    padding-top: .5em;
+}
+.file-content{
+    padding-top: .5em;
+    display: flex;
+    align-items: center;
+}
+.file-content img{
+    width: 1em;
 }
