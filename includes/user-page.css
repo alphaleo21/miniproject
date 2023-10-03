@@ -171,10 +171,12 @@ img{
     grid-area: main;
     background-color: #f9f9f9;
     margin: 1em;
-    padding: 20px;
+    padding: 15px;
     overflow: auto;
     color: black;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 40em){
@@ -234,21 +236,6 @@ img{
     100%{
         opacity: 1;
     }
-}
-@keyframes width-loading{
-    0%{
-        transform: translateX(-8em);
-    }
-    50%{
-        transform: translateX(-2em);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
-.main h2{
-    font-weight: 100;
 }
 
 
