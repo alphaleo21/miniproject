@@ -36,8 +36,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    overflow-x: hidden;
     transition: width 0.4s ease-in-out;
-    animation: width-loading 0.6s ease-in-out;
+
 }
 .section-1{
     padding: 1em;
@@ -178,7 +179,7 @@ img{
 
 @media (max-width: 40em){
     img{
-        width: 15px;
+        width: 20px;
     }
     .container{
         grid-template-columns: .1em 1fr;
@@ -198,7 +199,6 @@ img{
         width: 30px;
     }
     .side-nav{
-        display: none;
         width: 0;
         font-size: .8em;
     }
@@ -209,9 +209,9 @@ img{
         font-size: 1.4em;
     }
     .side-nav.active{
-        font-size: .8em;
+        font-size: 1em;
         display: flex;
-        width: 38.33%;
+        width: 50%;
     }
     header{
         height: 40px;
@@ -250,10 +250,7 @@ img{
 .main h2{
     font-weight: 100;
 }
-.main .h-divider{
-    background-color: black;
-    margin-inline: .1em;
-}
+
 
 .project-container{
     display: flex;
