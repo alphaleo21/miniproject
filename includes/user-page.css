@@ -1,4 +1,4 @@
-@import 'root.css';
+@import '../css/root.css';
 
 html{
     font-family: var(--heading-font);
