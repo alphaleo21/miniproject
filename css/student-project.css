@@ -6,23 +6,31 @@
     margin: 8px;
     border-radius: 5px;
 }
+.main{
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .search-form{
-    background-color: #d3d3d3d3;
+    /* background-color: #d3d3d38c; */
     padding: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     border-radius: .5em;
     width: 70dvw;
+    height: fit-content;
+    transition: height 0.4s ease-in-out;
 }
 .search-bar{
     margin-top: .5em;
-    border-radius: .3em;
+    border-radius: .5em;
     display: flex;
-    background-color: white;
+    background-color: #d3d3d38c;
     width: 75%;
     padding: .5em;
 }
 form{
+    display: flex;
     width: 100%;
     border: none;
 }
@@ -31,16 +39,130 @@ form input{
     border-radius: .3em;
     width: 100%;
     border: none;
+    background-color: transparent;
 }
-input:focus{
+form button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+input:focus-visible{
     border: none;
+    outline: none;
 }
+
 .search-bar img{
     display: flex;
     width: 23px;
 }
+.search-filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+}
+
+.filter{
+    background-color: var(--body-bgcolor);
+    color: white;
+    padding: .5em;
+    margin-top: .8em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: .6em;
+    transition: background-color 0.4s ease-in-out;
+}
+button{
+    border: none;
+}
+h3{
+    font-weight: 200;
+    font-family: var(--title-font);
+}
+.filter:hover{
+    background-color: rgb(57, 57, 185);
+}
+
+.filter-search{
+    margin: 1em;
+    background-color: var(--body-bgcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .2em;
+}
+form .filter-search{
+    margin: 0;
+}
+input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+/* Style radio button labels */
+label {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: var(--heading-font);
+    border-radius: 12px;
+    padding: .5em;
+    cursor: pointer;
+    color: white;
+    background-color: var(--body-bgcolor);
+    transition: background-color 0.4s ease-in-out;
+}
+label:hover{
+    background-color: rgb(57, 57, 185);
+}
+input[type="radio"]:checked + label { 
+    background-color: rgb(57, 57, 185);/* Change the color when selected */
+}
+.filter-search button{
+    background-color: rgb(136, 45, 240);
+    font-size: .8em;
+    color: white;
+    padding: .5em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: .6em;
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.filter-search button:hover{
+    transform: scale(1.1);
+
+}
+
+/* hidding the filter option  */
+.filter-search{
+    height: 0;
+    overflow-y: hidden;
+}
+.filter-search.show-filters{
+    height: fit-content;
+    animation: page-loading 0.8s ease-in-out;
+}
+
+
 @media (max-width: 40em){
     form input{
         font-size: .8em;
     }
+    .search-filter{
+        gap: .2em;
+    }
+    .filter h3{
+        display: none;
+    }
+    label{
+        margin: 0;
+    }
+    .filter-search{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .2em;
+    }
 }
+

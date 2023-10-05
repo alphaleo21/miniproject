@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeHive</title>
-    <link rel="icon" href="..icons/codeHive.svg">
+    <link rel="icon" href="../icons/codeHive.svg">
     <link rel="stylesheet" href="../css/student-project.css">
 </head>
 <body>
@@ -64,19 +64,44 @@
         <div class="main">
             <div class="search-form">
                 <h4>Search projects</h4>
-                <div class="search-bar">
-                    <form action="" method="POST">
-                        <input type="search" name="search-projects" id="search-projects">
-                    </form>
-                    <img src="../icons/search.svg" alt="">
+                <div class="search-filter">
+                    <div class="search-bar">
+                        <form action="" method="POST">
+                            <input type="search" placeholder="Search for projects here" name="search-projects" id="search-projects" required>
+                        <button type="submit">
+                            <div class="search-button">
+                                <img src="../icons/search.svg" alt="" id="form-icon">
+                            </div>
+                        </button>
+                        </form>
+                    </div>
+                    <button class="filter" id="filter">
+                        <h3>Filter</h3>
+                        <img src="../icons/filter.svg" alt="">
+                    </button>
                 </div>
-                <select name="" id="">
-                    <option value="pg">pg</option>
-                    <option value="ug">ug</option>
-                </select>
+                <div class="filter-search" id="filter-search">
+                    <form action="" method="POST" id="filter-form" class="filter-search">
+                        <input type="radio" name="project-ugpg" id="ug" value="UG">
+                        <label for="ug">UG</label>
+                        
+                        <input type="radio" name="project-ugpg" id="pg" value="PG">
+                        <label for="pg">PG</label>
+                        
+                        <input type="radio" name="project-type" id="mini-project" value="Mini Project">
+                        <label for="mini-project">Mini Project</label>
+                        
+                        <input type="radio" name="project-type" id="main-project" value="Main Project">
+                        <label for="main-project">Main Project</label>
+                        
+                        <button type="submit">Apply</button>
+                    </form>
+                </div>
             </div>
+            
         </div>
     </div>
     <script src="../js/user-page.js"></script>
+    <script src="../js/student-project.js"></script>
 </body>
 </html>
