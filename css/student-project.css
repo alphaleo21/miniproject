@@ -166,6 +166,7 @@ input[type="radio"]:checked + label {
 .project-box{
     max-width: 300px;
     min-width: 280px;
+    max-height: 200px;
     width: calc(25% - 10px);
     background-color: var(--body-bgcolor);
     border-radius: 12px;
@@ -189,6 +190,10 @@ input[type="radio"]:checked + label {
 }
 .file-content a:hover{
     color: rgb(57, 57, 185);
+}
+.file-content .project-description{
+    height: 100px;
+    overflow: scroll;
 }
 .project-container{
     margin: 1em;
