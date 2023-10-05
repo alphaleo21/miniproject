@@ -1,6 +1,7 @@
 @import '../css/root.css';
 @import '../includes/user-page.css';
 
+
 .projects{
     background-color: rgb(57, 57, 185);
     margin: 8px;
@@ -172,12 +173,22 @@ input[type="radio"]:checked + label {
 }
 
 .file-content{
-    padding-top: .5em;
     display: flex;
-    align-items: center;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--title-font);
+    gap: .2em;
 }
 .file-content img{
     width: 1em;
+    padding-right: 1em;
+}
+.file-content a{
+    color: black;
+}
+.file-content a:hover{
+    color: rgb(57, 57, 185);
 }
 .project-container{
     margin: 1em;
@@ -194,7 +205,13 @@ input[type="radio"]:checked + label {
 
 /* new uploads */
 
-
+.new-uploads{
+    display: flex;
+    flex-direction: column;
+}
+.new-uploads h2{
+    font-weight: 100;
+}
 
 @media (max-width: 40em){
     .search-form{
