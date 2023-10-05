@@ -17,3 +17,19 @@
     padding: 0;
     text-decoration: none;
 }
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 3px; /* Adjust the width as needed */
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888888e8; /* Change the color to your preference */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Style the scrollbar track when the mouse is over it */
+  ::-webkit-scrollbar-track:hover {
+    background-color: #aaa; /* Change the color to your preference */
+  }
+  
