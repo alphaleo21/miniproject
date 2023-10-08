@@ -26,9 +26,9 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-.form-submission form {
-    /* display: inline; */
-}
+/* .form-submission form {
+ display: inline; 
+} */
 
 label {
     display: block;
