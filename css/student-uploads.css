@@ -65,9 +65,3 @@
 .project-box:hover {
     transform: translateY(-5px); /* Move the box up slightly on hover */
 }
-
-@media (max-width: 40em){
-    .your-uploads{
-        /* overflow-x: hidden; */
-    }
-}
