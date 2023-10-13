@@ -1,0 +1,73 @@
+@import '../includes/user-page.css';
+
+.main{
+    margin-inline: 0;
+}
+
+.upload{
+    background-color: rgb(57, 57, 185);
+    margin: 8px;
+    border-radius: 5px;
+}
+
+.your-uploads h2{
+    padding-left: 1em;
+}
+
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.project-box{
+    max-width: 300px;
+    min-width: 280px;
+    max-height: 200px;
+    width: calc(25% - 10px);
+    background-color: var(--body-bgcolor);
+    border-radius: 12px;
+    padding: 1em;
+}
+
+.file-content{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--title-font);
+    gap: .5em;
+}
+.file-content img{
+    width: 1em;
+    padding-right: 1em;
+}
+.file-content a{
+    color: black;
+}
+.file-content a:hover{
+    color: rgb(57, 57, 185);
+}
+.file-content .project-description{
+    height: 80px;
+    overflow: scroll;
+}
+.project-container{
+    margin: 1em;
+}
+.project-box{
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+    border: 1px solid #ccc;
+    transition: transform 0.2s ease-in-out;
+}
+.project-box:hover {
+    transform: translateY(-5px); /* Move the box up slightly on hover */
+}
+
+@media (max-width: 40em){
+    .your-uploads{
+        /* overflow-x: hidden; */
+    }
+}
