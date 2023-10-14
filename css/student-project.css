@@ -8,7 +8,7 @@
     border-radius: 5px;
 }
 .main{
-    padding: 0;
+    padding: 1em;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
