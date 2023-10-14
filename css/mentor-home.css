@@ -1,0 +1,167 @@
+@import '../includes/user-page.css';
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: flex-start;
+}
+.main h2,
+h3,
+h4{
+    font-weight: 300;
+}
+.main p{
+    font-family: var(--title-font);
+}
+
+/* Styles for the main content section */
+.main {
+    padding: 20px;
+}
+
+/* Styles for the welcome message */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-message h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.welcome-message p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Styles for the new idea submissions */
+.new-idea-submissions {
+    margin-bottom: 20px;
+}
+
+.new-idea-submissions h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Styles for the new ideas */
+.new-ideas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+/* Styles for the idea submission divs */
+.idea-submission {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    /* width: 45%; */
+}
+
+.idea-submission h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+.idea-submission p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.approve-button, .reject-button {
+    background-color: #4CAF50; /* Green for Approve */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.reject-button {
+    background-color: #f44336; /* Red for Reject */
+}
+
+/* Styles for the new project uploads */
+
+.new-projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.new-projects h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Styles for the project upload div */
+.project-upload {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.project-upload h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+.project-upload p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Styles for the search bar */
+.search-bar{
+    margin-top: .5em;
+    margin-inline: 3vw;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    display: flex;
+    background-color: #f9f9f9;
+    align-items: center;
+    justify-content: center;
+    /* width: 75%; */
+    padding: .5em;
+}
+form{
+    display: flex;
+    width: 100%;
+    border: none;
+}
+form input{
+    font-size: 1em;
+    border-radius: .3em;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+form button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+
+input:focus-visible{
+    border: none;
+    outline: none;
+}
+
+.search-bar img{
+    display: flex;
+    width: 23px;
+}
