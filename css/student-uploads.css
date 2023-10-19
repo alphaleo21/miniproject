@@ -2,6 +2,8 @@
 
 .main{
     margin-inline: 0;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .upload{
@@ -11,7 +13,7 @@
 }
 
 .your-uploads h2{
-    padding-left: 1em;
+    padding: 1em;
 }
 
 .project-container{
@@ -64,4 +66,64 @@
 }
 .project-box:hover {
     transform: translateY(-5px); /* Move the box up slightly on hover */
+}
+
+.add-projects{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    scroll-behavior: smooth;
+}
+.add-projects p{
+    font-family: var(--title-font);
+    padding: 1em;
+}
+
+label {
+    /* display: block; */
+    font-family: var(--title-font);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 5px;
+    font-size: 16px;
+}
+input[type="radio"]{
+    padding-inline: 1em;
+    margin: 0;
+    width: auto;
+}
+
+input[type="submit"] {
+    background-color: rgb(57, 57, 185);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }

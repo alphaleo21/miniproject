@@ -62,6 +62,58 @@
             </div>
         </header>
         <div class="main">
+            <div class="add-projects">
+                <h1>Project Upload</h1>
+                <form action="process_project_upload.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required><br><br>
+
+                    <label for="projectType">Project Type:</label>
+                    <input type="radio" id="singleProject" name="projectType" value="Single" checked>
+                    <label for="singleProject">Single</label>
+                    <input type="radio" id="groupProject" name="projectType" value="Group">
+                    <label for="groupProject">Group</label>
+
+                    <!-- Instructions -->
+                    <p>For group projects, please enter the usernames or names of all group members separated by commas.</p>
+
+                    <!-- Field for group members -->
+                    <label for="groupMembers">Group Members:</label>
+                    <input type="text" id="groupMembers" name="groupMembers" placeholder="Enter usernames or names">
+                   <br><br>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea><br><br>
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Resubmit">Resubmit</option>
+                    </select><br><br>
+
+                    <label for="progress_percentage">Progress Percentage:</label>
+                    <input type="number" id="progress_percentage" name="progress_percentage" min="0" max="100"><br><br>
+
+                    <label for="submission_year">Submission Year:</label>
+                    <input type="number" id="submission_year" name="submission_year"><br><br>
+
+                    <label for="keywords">Keywords:</label>
+                    <input type="text" id="keywords" name="keywords"><br><br>
+
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="start_date" name="start_date"><br><br>
+
+                    <label for="end_date">End Date:</label>
+                    <input type="date" id="end_date" name="end_date"><br><br>
+
+                    <label for="project_file">Project File (Upload):</label>
+                    <input type="file" id="project_file" name="project_file" accept=".zip, .rar"><br><br>
+
+                    <input type="submit" value="Upload Project">
+                </form>
+            </div>
             <div class="your-uploads">
                 <h2>Your Uploads</h2>
                 <div class="project-container">
@@ -109,20 +161,7 @@
                             <a href="#"><img src="../icons/code-solid.svg" alt="">file source</a>
                         </div>
                     </div>
-                    <div class="project-box">
-                        <div class="file-content">
-                            <h4>project name</h4>
-                            <p>project description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequuntur fugit hic assumenda! Perferendis recusandae et adipisci quae</p>
-                            <div class="author">
-                                <h5>Author</h5>
-                                
-                            </div>
-                            <div class="lang-used">
-                                <h5>Languages</h5>
-                            </div>
-                            <a href="#"><img src="../icons/code-solid.svg" alt="">file source</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
