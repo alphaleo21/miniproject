@@ -11,6 +11,9 @@ h3,
 h4{
     font-weight: 300;
 }
+h3{
+    padding-bottom: 1em;
+}
 .main p{
     font-family: var(--title-font);
 }
@@ -59,7 +62,8 @@ h4{
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    /* width: 45%; */
+    width: 45%;
+    max-height: 200px;
 }
 
 .idea-submission h4 {
@@ -71,6 +75,10 @@ h4{
     font-size: 16px;
     color: #666;
     margin: 5px 0;
+}
+.description{
+    height: 100px;
+    overflow: scroll;
 }
 
 .approve-button, .reject-button {
@@ -111,6 +119,8 @@ h4{
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 5px;
+    width: 45%;
+    max-height: 200px;
 }
 
 .project-upload h4 {
@@ -164,4 +174,11 @@ input:focus-visible{
 .search-bar img{
     display: flex;
     width: 23px;
+}
+
+@media (max-width: 40em){
+    .idea-submission, 
+    .project-upload{
+        width: auto;
+    }
 }
