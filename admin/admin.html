@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeHive</title>
     <link rel="icon" href="..icons/codeHive.svg">
-    <link rel="stylesheet" href="../admin/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
     <div class="container">
@@ -52,17 +52,12 @@
                 <img src="../icons/account.svg" alt="">
                 <h2>Admin</h2>
             </div>
-            <div class="right-side-links">
-                <div class="notifi-icon">
-                    <a href="#">
-                        <img src="../icons/bell.svg" alt="">
-                    </a>
-                    <span class="notification-count">4</span>
-                </div>
-            </div>
         </header>
         <div class="main">
-            <h2>Welcome, Admin!</h2>
+                <h2>Welcome, Admin!</h2>
+                <h3>Mentor Requests</h3>
+                
+                <?php include("admin-requests.php"); ?>
             
         </div>
     </div>
