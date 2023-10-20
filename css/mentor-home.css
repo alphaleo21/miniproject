@@ -1,5 +1,12 @@
 @import '../includes/user-page.css';
 
+.home,
+.projects{
+    background-color: rgb(57, 57, 185);
+    margin: 8px;
+    border-radius: 5px;
+}
+
 .main{
     display: flex;
     flex-direction: column;
@@ -61,7 +68,7 @@ h3{
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 45%;
     max-height: 200px;
 }
@@ -97,6 +104,19 @@ h3{
 
 .reject-button {
     background-color: #f44336; /* Red for Reject */
+}
+.feedback{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 /* Styles for the new project uploads */
@@ -176,9 +196,15 @@ input:focus-visible{
     width: 23px;
 }
 
-@media (max-width: 40em){
+@media (max-width: 60em){
     .idea-submission, 
     .project-upload{
         width: auto;
+    }
+    .approve-button, 
+    .reject-button,
+    .feedback{
+        font-size: 12px;
+        
     }
 }
