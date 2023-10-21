@@ -1,15 +1,66 @@
 @import '../includes/user-page.css';
 
-.admin-select{
+.dashboard{
     background-color: rgb(57, 57, 185);
     margin: 8px;
     border-radius: 5px;
 }
 
 .main{
-    flex: 1 1 0;
-    /* width: 200px; */
+    flex-direction: column;
+    justify-content: flex-start;
 }
-table{
-    width: max-content;
+.main h2,
+p,
+button{
+    font-weight: 300;
+    font-family: var(--title-font);
+}
+.mentor-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mentor-request {
+    background-color: #fff;
+    min-width: 250px;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mentor-request h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.approve-button {
+    background-color: #4caf50;
+}
+
+button.reject-button {
+    background-color: #f44336;
+}
+
+/* Center buttons within the mentor request */
+button {
+    display: inline;
+    margin: 10px auto;
 }
