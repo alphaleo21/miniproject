@@ -1,0 +1,91 @@
+@import '../includes/user-page.css';
+
+.manage-projects {
+    background-color: rgb(57, 57, 185);
+    margin: 2px;
+    border-radius: 5px;
+}
+.main{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.search-filters {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* background-color: #f5f5f5; */
+}
+
+.search-filters form {
+    display: flex;
+    align-items: center;
+}
+
+.search-filters input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-filters button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-filters button[type="submit"][form="filter-form"] {
+    margin-left: 5px;
+}
+.search-filters button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+}
+
+table a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
