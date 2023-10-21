@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeHive</title>
+    <link rel="icon" href="..icons/codeHive.svg">
+    <link rel="stylesheet" href="../css/manage-users.css">
+</head>
+<body>
+    <div class="container">
+        <div class="side-nav" id="side-nav">
+            <div class="section-1">
+                <div id="username">User</div>
+                <div class="cross" id="cross">
+                    <img src="../icons/cross.svg" alt="">
+                </div>
+            </div>
+            <div class="h-divider"></div>
+            
+            <div class="link">
+                <img src="../icons/home.svg" alt="">
+                <a href="../admin/admin.html" id="projects">Dashboard</a>
+            </div>
+            <div class="link manage-user">
+                <img src="../icons/account.svg" alt="">
+                <a href="../admin/manage-users.html" id="idea-submission">Manage Users</a>
+            </div>
+            <div class="link">
+                <img src="../icons/resource.svg" alt="">
+                <a href="../admin/manage-projects.html" id="your-projects">Manage Projects</a>
+            </div>
+            <div class="link">
+                <img src="../icons/bell.svg" alt="">
+                <a href="" id="notification">Notifications</a>
+            </div>
+            <div class="h-divider"></div>
+            <div class="link">
+                <img src="../icons/setting.svg" alt="">
+                <a href="" id="setting">Settings</a>
+            </div>
+            <div class="link">
+                <img src="../icons/logout.svg" alt="">
+                <a href="" id="logout">Logout</a>
+            </div>
+        </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../icons/menu.svg" alt="">
+        </div>
+        <header>
+            <div class="user">
+                <img src="../icons/account.svg" alt="">
+                <h2>Admin</h2>
+            </div>
+        </header>
+        <div class="main">
+            <h1>Manage Users</h1>
+        
+        <!-- Search and Filters -->
+            <div class="search-filters">
+                
+                <form action="search.php" method="GET">
+                    <input type="text" name="search" placeholder="Search by username or email">
+                    <button type="submit">Search</button>
+                </form>
+                
+                <select>
+                    <option value="all">All Users</option>
+                    <option value="students">Students</option>
+                    <option value="mentors">Mentors</option>
+                </select>
+                <button>Filter</button>
+            </div>
+            
+        <!-- User List (Table) -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Batch Year</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>user1</td>
+                        <td>user1@example.com</td>
+                        <td>Student</td>
+                        <td>2022</td>
+                        <td>
+                            <a href="edit_user.php?id=1">Edit</a> |
+                            <a href="delete_user.php?id=1">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>user1</td>
+                        <td>user1@example.com</td>
+                        <td>Student</td>
+                        <td>2022</td>
+                        <td>
+                            <a href="edit_user.php?id=1">Edit</a> |
+                            <a href="delete_user.php?id=1">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>user1</td>
+                        <td>user1@example.com</td>
+                        <td>Student</td>
+                        <td>2022</td>
+                        <td>
+                            <a href="edit_user.php?id=1">Edit</a> |
+                            <a href="delete_user.php?id=1">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- More user entries go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../js/user-page.js"></script>
+</body>
+</html>
+
+<!-- <?php
+if (isset($_GET['search'])) {
+    $search = $_GET['search'];
+
+    // Connect to your database (not shown in this example)
+
+    // Build and execute a SQL query
+    $sql = "SELECT * FROM users WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
+    $result = mysqli_query($dbConnection, $sql);
+
+    // Create a table to display the results
+    echo '<table>';
+    echo '<thead><tr><th>User ID</th><th>Username</th><th>Email</th><th>Role</th><th>Batch Year</th><th>Actions</th></tr></thead>';
+    echo '<tbody>';
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo '<tr>';
+        echo '<td>' . $row['user_id'] . '</td>';
+        echo '<td>' . $row['username'] . '</td>';
+        echo '<td>' . $row['email'] . '</td>';
+        echo '<td>' . $row['role'] . '</td>';
+        echo '<td>' . $row['batch_year'] . '</td>';
+        echo '<td><a href="edit_user.php?id=' . $row['user_id'] . '">Edit</a> | <a href="delete_user.php?id=' . $row['user_id'] . '">Delete</a></td>';
+        echo '</tr>';
+    }
+    echo '</tbody>';
+    echo '</table>';
+}
+?> -->
