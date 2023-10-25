@@ -29,6 +29,8 @@ body{
     justify-content: center;
     animation: loadingmenu 1s;
     position: relative;
+    color: var(--input-color);
+    font-size: 1.2em;
 }
 h2{
     font-family: var(--heading-font);
@@ -106,6 +108,7 @@ h2{
     width: 100%;
     padding: 1em 1em;
     box-sizing: border-box;
+    color: var(--input-color);
 }
 .input-container label{
     position: absolute;
@@ -128,9 +131,10 @@ h2{
 
 .input-container input:focus + label,
 .input-container input:not(:placeholder-shown) + label{
-    top: .5em;
-    left: 1.5em;
-    font-size: 1em;
+    top: .8em;
+    left: 2em;
+    font-size: .7em;
+
 }
 
 .form form{ 
@@ -182,6 +186,9 @@ h3 a:hover{
 }
 
 @media (max-width: 40em){
+    html{
+        font-size: .8em;
+    }
     .container::after{
         display: none;
     }
@@ -192,12 +199,20 @@ h3 a:hover{
         font-size: 1em;
         position: absolute;
         left: 1.5em;
-        top: 2.1em;
+        top: 1.5em;
         transition: 0.2s;
         pointer-events: none;
     }
     .logo h2{
-        font-size: 2em;
+        font-size: 1em;
+    }.logo img{
+        width: 1em;
+    }
+    input{
+        font-size: 1em;
+    }
+    #error-message{
+        font-size: 8px;
     }
 }
 
@@ -231,6 +246,6 @@ h3 a:hover{
     }
     to{
         right: 5em;
-        transform: translateY(1em);
+        transform: translateY(.8em);
     }
 }
