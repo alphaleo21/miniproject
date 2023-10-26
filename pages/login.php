@@ -29,7 +29,7 @@
                     </div>
                     <input class="submit" type="submit" value="Login">
                 </form>
-                <h3>New to this <a href="../pages/createAccount.html">Create Account</a></h3>    
+                <h3>New to this <a href="../pages/createAccount.php">Create Account</a></h3>    
         </div>                 
     </div>
 </body>

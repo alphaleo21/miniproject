@@ -87,7 +87,7 @@
             <input type="submit" class="submit" />
           </form>
         </div>
-        <h3>Already have an account <a href="../pages/login.html">LogIn</a></h3>
+        <h3>Already have an account <a href="../pages/login.php">LogIn</a></h3>
         <div id="error-messages" style="color: red; font-size: 12px;"></div>
       </div>
     </div>
