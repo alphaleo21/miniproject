@@ -16,6 +16,4 @@
 
     echo "Connection succes";
 
-    mysqli_close($conn);
-
 ?>

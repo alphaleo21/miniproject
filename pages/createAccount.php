@@ -88,9 +88,53 @@
           </form>
         </div>
         <h3>Already have an account <a href="../pages/login.php">LogIn</a></h3>
-        <div id="error-messages" style="color: red; font-size: 12px;"></div>
+        <div id="error-messages" style="color: red; font-size: 12px;">
+      
+          <?php
+            echo "<p>$error_message</p>";
+          ?>
+
+        </div>
       </div>
     </div>
     <script src="../js/createAccount.js"></script>
   </body>
 </html>
+
+
+<?php
+    include('connection.php');
+
+    $error_message = "";
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $username = mysqli_real_escape_string($conn, $_POST['username']);
+        $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $batch = mysqli_real_escape_string($conn, $_POST['batch']);
+        $registerNo = mysqli_real_escape_string($conn, $_POST['registerNo']);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    //checking for user's already have an account using email
+    $sql = "SELECT * FROM Users WHERE email = '$email'";
+    $result = mysqli_query($conn, $sql);
+
+    if(mysqli_num_rows($result) > 0){
+        //email already exists
+        $error_message =  "Email is already registered.";
+    }else {
+      // Insert into the database
+      $sql = "INSERT INTO Users (username, fullname, email, password, batch_year, registerno) VALUES 
+      ('$username', '$fullname','$email', '$password', $batch, '$registerNo')";
+
+      if(mysqli_query($conn, $sql)) {
+        $error_message = "registeration successfull";
+      }else{
+        $error_message =  "registration failed";
+      }
+    }
+  }
+   
+    mysqli_close($conn);
+?>
+
