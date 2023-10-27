@@ -1,3 +1,17 @@
+<?php
+
+    $_POST = array();
+    session_start();
+
+    // Check if there is an error message in the session
+    $error_message = isset($_SESSION['error_message']) ? $_SESSION['error_message'] : '';
+
+    // Clear the error message from the session to prevent it from displaying multiple times
+    unset($_SESSION['error_message']);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,17 +36,17 @@
       </div>
       <div class="contents">
         <div class="form">
-          <form action="" method="POST" onsubmit="return validateForm()">
+          <form action="../php/registerForm.php" method="POST" onsubmit="return validateForm()">
             <div>
               <label for="user-type">Account Type:</label><br />
               <input
                 type="radio"
                 name="user-type"
-                id="user"
-                value="user"
+                id="student"
+                value="student"
                 checked
               />
-              User
+              Student
               <input type="radio" name="user-type" id="mentor" value="mentor" />
               Mentor
             </div>
@@ -42,6 +56,7 @@
                 id="fullname"
                 name="fullname"
                 placeholder=""
+                value = ""
                 required
               />
               <label for="fullname">Fullname</label>
@@ -52,6 +67,7 @@
                 id="username"
                 name="username"
                 placeholder=""
+                value = ""
                 required
               />
               <label for="username">Username</label>
@@ -62,16 +78,17 @@
                 id="email"
                 name="email"
                 placeholder=""
+                value = ""
                 required
               />
               <label for="email">Email</label>
             </div>
             <div class="input-container">
-              <input type="text" id="batch" name="batch" placeholder="2021-24" required />
+              <input type="text" id="batch" name="batch" placeholder="2021-24" value = "" required />
               <label for="batch">Batch</label>
             </div>
             <div class="input-container">
-              <input type="number" id="registerNo" name="registerNo" placeholder="" required />
+              <input type="number" id="registerNo" name="registerNo" placeholder="" value = "" required />
               <label for="registerNo">Register No</label>
             </div>
             <div class="input-container">
@@ -88,53 +105,11 @@
           </form>
         </div>
         <h3>Already have an account <a href="../pages/login.php">LogIn</a></h3>
-        <div id="error-messages" style="color: red; font-size: 12px;">
-      
-          <?php
-            echo "<p>$error_message</p>";
-          ?>
-
+        <div id="error-messages" style="color: red; font-size: 22px;">
+           <?php echo $error_message; ?>
         </div>
       </div>
     </div>
     <script src="../js/createAccount.js"></script>
   </body>
 </html>
-
-
-<?php
-    include('connection.php');
-
-    $error_message = "";
-
-  if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $batch = mysqli_real_escape_string($conn, $_POST['batch']);
-        $registerNo = mysqli_real_escape_string($conn, $_POST['registerNo']);
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    //checking for user's already have an account using email
-    $sql = "SELECT * FROM Users WHERE email = '$email'";
-    $result = mysqli_query($conn, $sql);
-
-    if(mysqli_num_rows($result) > 0){
-        //email already exists
-        $error_message =  "Email is already registered.";
-    }else {
-      // Insert into the database
-      $sql = "INSERT INTO Users (username, fullname, email, password, batch_year, registerno) VALUES 
-      ('$username', '$fullname','$email', '$password', $batch, '$registerNo')";
-
-      if(mysqli_query($conn, $sql)) {
-        $error_message = "registeration successfull";
-      }else{
-        $error_message =  "registration failed";
-      }
-    }
-  }
-   
-    mysqli_close($conn);
-?>
-
