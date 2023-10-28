@@ -1,3 +1,21 @@
+<?php
+
+    $_POST = array();
+    session_start();
+
+    // message in the session
+    $username_incorrect = isset($_SESSION['username_incorrect']) ? $_SESSION['username_incorrect'] : '';
+    $password_incorrect = isset($_SESSION['password_incorrect']) ? $_SESSION['password_incorrect'] : '';
+    $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+    // Clear the message from the session to prevent it from displaying multiple times
+    unset($_SESSION['password_incorrect']);
+    unset($_SESSION['username']);
+    unset($_SESSION['username_incorrect']);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +35,20 @@
             </a>
         </div>
        <div class="form">
-        <h2>Welcome</h2>
-                <form action="signIn.php" method="post">
+        <h2>Welcome <h1 style="color: white;"><?php echo $username ?></h1>  </h2>
+                <form action="../php/loginProcess.php" method="POST">
                     <div class="input-container">
-                        <input type="text" name="username" placeholder="" required>
+                        <input type="text" id="username" name="username" placeholder="" required>
                         <label for="username">Username</label>
                     </div>
                     <div class="input-container">
-                        <input type="password" name="password" placeholder="" required>
+                        <input type="password" id="password" name="password" placeholder="" required>
                         <label for="password">Password</label>
+                    </div>
+                    <div><p style="color: red; font-size: 22px;">
+                        <?php echo $username_incorrect ?></p>
+                        <p style="color: red; font-size: 22px;">
+                        <?php echo $password_incorrect ?></p>
                     </div>
                     <input class="submit" type="submit" value="Login">
                 </form>
