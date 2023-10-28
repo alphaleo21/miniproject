@@ -1,5 +1,5 @@
 <?php
-    @include('config.php');
+    include('config.php');
 
   if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = mysqli_real_escape_string($conn, $_POST['username']);
@@ -26,7 +26,13 @@
       ('$username', '$fullname','$email', '$password', $batch, '$registerNo')";
 
       if(mysqli_query($conn, $sql)) {
-        echo "registeration successfull";
+
+          session_start();
+          $_SESSION['welcome_message'] = "Registeration successfull!!";
+          $_SESSION['username'] = $username;
+          header('Location: ../pages/login.php'); //Redirect to login page
+          exit;
+
       }else{
         echo  "registration failed";
       }
