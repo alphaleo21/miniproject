@@ -37,19 +37,7 @@
       <div class="contents">
         <div class="form">
           <form action="../php/registerForm.php" method="POST" onsubmit="return validateForm()">
-            <div>
-              <label for="user-type">Account Type:</label><br />
-              <input
-                type="radio"
-                name="user-type"
-                id="student"
-                value="student"
-                checked
-              />
-              Student
-              <input type="radio" name="user-type" id="mentor" value="mentor" />
-              Mentor
-            </div>
+            
             <div class="input-container">
               <input
                 type="text"
@@ -83,10 +71,10 @@
               />
               <label for="email">Email</label>
             </div>
-            <div class="input-container">
+            <!-- <div class="input-container">
               <input type="text" id="batch" name="batch" placeholder="2021-24" value = "" required />
               <label for="batch">Batch</label>
-            </div>
+            </div> -->
             <div class="input-container">
               <input type="number" id="registerNo" name="registerNo" placeholder="" value = "" required />
               <label for="registerNo">Register No</label>

@@ -28,14 +28,14 @@ function validateForm() {
       "Password must be at least 8 characters long, contain at least one digit, one lowercase letter, and one uppercase letter.<br>";
   }
 
-  // If it's a user, check the batch
-  if (document.getElementById("user").checked) {
-    var batch = document.getElementById("batch").value;
-    if (batch === "") {
-      errorMessage += "Batch is required for users.<br>";
-    }
-  }
-  console.log("hello");
+  // // If it's a user, check the batch
+  // if (document.getElementById("user").checked) {
+  //   var batch = document.getElementById("batch").value;
+  //   if (batch === "") {
+  //     errorMessage += "Batch is required for users.<br>";
+  //   }
+  // }
+  // console.log("hello");
   // Display error message or submit the form
   var errorDiv = document.getElementById("error-messages");
   if (errorMessage !== "") {
@@ -47,23 +47,23 @@ function validateForm() {
   }
 }
 
-// Get radio buttons
-const userTypeRadio = document.querySelectorAll('input[name="user-type"]');
+// // Get radio buttons
+// const userTypeRadio = document.querySelectorAll('input[name="user-type"]');
 
-// Attach a change event listener to the radio buttons
-userTypeRadio.forEach(radio => {
-  radio.addEventListener('change', toggleForm);
-});
+// // Attach a change event listener to the radio buttons
+// userTypeRadio.forEach(radio => {
+//   radio.addEventListener('change', toggleForm);
+// });
 
-function toggleForm() {
-  const selectedType = document.querySelector('input[name="user-type"]:checked').value;
-  const batchField = document.querySelector('input[name="batch"]');
-  const batchlabel = document.querySelector('label[for="batch"]');
+// function toggleForm() {
+//   const selectedType = document.querySelector('input[name="user-type"]:checked').value;
+//   const registerNoField = document.querySelector('input[name="registerNo"]');
+//   const registerNolabel = document.querySelector('label[for="registerNo"]');
 
-  // If selectedType is "mentor," hide the batch field, else show it.
-  batchField.style.display = selectedType === 'mentor' ? 'none' : 'block';
-  batchlabel.style.display = selectedType === 'mentor' ? 'none' : 'block';
-}
+//   // If selectedType is "mentor," hide the registerNo field, else show it.
+//   registerNoField.style.display = selectedType === 'mentor' ? 'none' : 'block';
+//   registerNolabel.style.display = selectedType === 'mentor' ? 'none' : 'block';
+// }
 
-// Initialize the form based on the default selected radio button
-toggleForm();
+// // Initialize the form based on the default selected radio button
+// toggleForm();
