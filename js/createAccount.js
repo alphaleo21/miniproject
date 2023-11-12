@@ -47,23 +47,21 @@ function validateForm() {
   }
 }
 
-// // Get radio buttons
-// const userTypeRadio = document.querySelectorAll('input[name="user-type"]');
+document.getElementById('show-password').addEventListener('click', function() {
+  var passwordInput = document.getElementById('password');
+  passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+});
 
-// // Attach a change event listener to the radio buttons
-// userTypeRadio.forEach(radio => {
-//   radio.addEventListener('change', toggleForm);
-// });
+            // Get references to the images
+            var visibleImage = document.querySelector('.visible');
+            var nonVisibleImage = document.querySelector('.non-visible');
 
-// function toggleForm() {
-//   const selectedType = document.querySelector('input[name="user-type"]:checked').value;
-//   const registerNoField = document.querySelector('input[name="registerNo"]');
-//   const registerNolabel = document.querySelector('label[for="registerNo"]');
+            // Get reference to the div
+            var showPasswordDiv = document.getElementById('show-password');
 
-//   // If selectedType is "mentor," hide the registerNo field, else show it.
-//   registerNoField.style.display = selectedType === 'mentor' ? 'none' : 'block';
-//   registerNolabel.style.display = selectedType === 'mentor' ? 'none' : 'block';
-// }
-
-// // Initialize the form based on the default selected radio button
-// toggleForm();
+            // Add click event listener to the div
+            showPasswordDiv.addEventListener('click', function() {
+                // Toggle visibility of the images
+                visibleImage.classList.toggle('non-visible');
+                nonVisibleImage.classList.toggle('non-visible');
+            });

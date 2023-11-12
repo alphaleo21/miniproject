@@ -1,3 +1,16 @@
+<?php
+
+    $_POST = array();
+    session_start();
+
+    // message in the session
+    $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+    
+    // Clear the message from the session to prevent it from displaying multiple times
+    unset($_SESSION['username']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +24,7 @@
     <div class="container">
         <div class="side-nav" id="side-nav">
             <div class="section-1">
-                <div id="username">User</div>
+                <div id="username"><?php echo $username ?></div>
                 <div class="cross" id="cross">
                     <img src="../icons/cross.svg" alt="">
                 </div>

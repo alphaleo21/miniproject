@@ -36,7 +36,7 @@
       </div>
       <div class="contents">
         <div class="form">
-          <form action="../php/registerForm.php" method="POST" onsubmit="return validateForm()">
+          <form id="registerForm" action="../php/registerForm.php" method="POST" onsubmit="return validateForm()">
             
             <div class="input-container">
               <input
@@ -44,7 +44,6 @@
                 id="fullname"
                 name="fullname"
                 placeholder=""
-                value = ""
                 required
               />
               <label for="fullname">Fullname</label>
@@ -55,7 +54,6 @@
                 id="username"
                 name="username"
                 placeholder=""
-                value = ""
                 required
               />
               <label for="username">Username</label>
@@ -66,7 +64,6 @@
                 id="email"
                 name="email"
                 placeholder=""
-                value = ""
                 required
               />
               <label for="email">Email</label>
@@ -76,7 +73,7 @@
               <label for="batch">Batch</label>
             </div> -->
             <div class="input-container">
-              <input type="number" id="registerNo" name="registerNo" placeholder="" value = "" required />
+              <input type="number" id="registerNo" name="registerNo" placeholder="" required />
               <label for="registerNo">Register No</label>
             </div>
             <div class="input-container">
@@ -88,12 +85,18 @@
                 required
               />
               <label for="password">Password</label>
+
+              <div id="show-password" class="show-password-icon">
+                <img class="visible" src="../icons/visibility_off .svg" alt="">
+                <img class="non-visible" src="../icons/visibility.svg" alt="">
+              </div>
+              
             </div>
             <input type="submit" class="submit" />
           </form>
         </div>
         <h3>Already have an account <a href="../pages/login.php">LogIn</a></h3>
-        <div id="error-messages" style="color: red; font-size: 22px;">
+        <div id="error-messages" style="color: red; font-size: 18px;">
            <?php echo $error_message; ?>
         </div>
       </div>

@@ -21,7 +21,10 @@
         $storedPassword = $row['password'];
 
         if(password_verify($password, $storedPassword)) {
-            header('Location: ../pages/student-project.html');
+            session_start();
+            $_SESSION['username'] = $username;
+            header('Location: ../pages/student-project.php');
+            exit;
         } else {
             session_start();
             $_SESSION['password_incorrect'] = "Password is incorrect!!";

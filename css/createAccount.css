@@ -1,251 +1,264 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed&display=swap");
 
 /* font-family: 'Black Ops One', cursive;
 font-family: 'Roboto Condensed', sans-serif; */
 
-:root{
-    --heading-font: 'Black Ops One', cursive;
-    --heading-size: 2rem;
-    --title-font: 'Roboto Condensed', sans-serif;
+:root {
+  --heading-font: "Black Ops One", cursive;
+  --heading-size: 2rem;
+  --title-font: "Roboto Condensed", sans-serif;
 
-    --body-bgcolor: #000022;
-    --heading-color: #FFFFFF;
-    --container-bgcolor: rgba(255, 255, 255, 0.116);
-    --input-color: #f3f3f5;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-body{
-    box-sizing: border-box;
-    height: 100dvh;
-    background-color: var(--body-bgcolor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: loadingmenu 1s;
-    position: relative;
-    color: var(--input-color);
-    font-size: 1.2em;
-}
-h2{
-    font-family: var(--heading-font);
-    font-size: var(--heading-size);
-    color: var(--heading-color);
-}
-.container{
-    /* background-color: var(--container-bgcolor); */
-    min-height: 50%;
-    /* min-width: 50%; */
-    margin-inline: 1em;
-    display: flex;
-    flex-direction: column;
-    
-    z-index: 1;
-    align-items: center;
-    /* justify-content: center; */
-    border-radius: 2em;
-    padding: 2em;
-    box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2);
-}
-.container::before{
-    content: "";
-    width: 30vmax;
-    height: 30vmax;
-    position: absolute;
-    background: rgba(255,255,255,.041);
-    left: 2vmin;
-    top: 3vmin;
-    will-change: border-radius,transform;
-    transform-origin: 55% 55%;
-    pointer-events: none;
-    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
-    animation: moveshape 5s linear infinite alternate;
+  --body-bgcolor: #000022;
+  --heading-color: #ffffff;
+  --container-bgcolor: rgba(255, 255, 255, 0.116);
+  --input-color: #f3f3f5;
 }
 
-.container::after{
-    content: "";
-    width: 30vmax;
-    height: 30vmax;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.041);
-    right: 2vmin;
-    bottom: 2vmin;
-    /* z-index: 1; */
-    will-change: border-radius,transform;
-    transform-origin: 55% 55%;
-    pointer-events: none;
-    border-radius: 30% 70% 67% 33% / 30% 36% 64% 70% ;
-    animation: movedown 5s linear infinite alternate;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-.logo a{
-    position: absolute;
-    top: 0;
-    left: 0;
+body {
+  box-sizing: border-box;
+  height: 100dvh;
+  background-color: var(--body-bgcolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loadingmenu 1s;
+  position: relative;
+  color: var(--input-color);
+  font-size: 1.2em;
+}
+h2 {
+  font-family: var(--heading-font);
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+.container {
+  /* background-color: var(--container-bgcolor); */
+  min-height: 50%;
+  /* min-width: 50%; */
+  margin-inline: 1em;
+  display: flex;
+  flex-direction: column;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--heading-color);
-    margin: 1em ;
-    margin-bottom: 1em;
+  z-index: 1;
+  align-items: center;
+  /* justify-content: center; */
+  border-radius: 2em;
+  padding: 2em;
+  box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2);
 }
-
-.contents{
-    min-width: 80%;
-}
-
-.input-container{
-    position: relative;
-    display: flex;
-   
-}
-.input-container input{
-    width: 100%;
-    padding: 1em 1em;
-    box-sizing: border-box;
-    color: var(--input-color);
-}
-.input-container label{
-    position: absolute;
-    left: 2em;
-    top: 1.5em;
-    transition: 0.2s;
-    pointer-events: none;
-
-    color: var(--input-color);
-    font-family: var(--title-font);
-    font-size: 1.3rem;
+.container::before {
+  content: "";
+  width: 30vmax;
+  height: 30vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.041);
+  left: 2vmin;
+  top: 3vmin;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none;
+  border-radius: 30% 70% 67% 33% / 30% 36% 64% 70%;
+  animation: moveshape 5s linear infinite alternate;
 }
 
-.input-container input::placeholder{
-    opacity: 0;
+.container::after {
+  content: "";
+  width: 30vmax;
+  height: 30vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.041);
+  right: 2vmin;
+  bottom: 2vmin;
+  /* z-index: 1; */
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none;
+  border-radius: 30% 70% 67% 33% / 30% 36% 64% 70%;
+  animation: movedown 5s linear infinite alternate;
 }
-.input-container input:focus::placeholder{
-    opacity: 1;
+.logo a {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--heading-color);
+  margin: 1em;
+  margin-bottom: 1em;
+}
+
+.contents {
+  min-width: 80%;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+}
+
+.input-container input {
+  width: calc(100% - 2em);
+  padding: 1em 1em;
+  box-sizing: border-box;
+  color: var(--input-color);
+}
+
+.input-container label {
+  position: absolute;
+  left: 2em;
+  top: 1.5em;
+  transition: 0.2s;
+  pointer-events: none;
+  color: var(--input-color);
+  font-family: var(--title-font);
+  font-size: 1.3rem;
+}
+
+.input-container input::placeholder {
+  opacity: 0;
+}
+
+.input-container input:focus::placeholder {
+  opacity: 1;
 }
 
 .input-container input:focus + label,
-.input-container input:not(:placeholder-shown) + label{
-    top: .8em;
-    left: 2em;
-    font-size: .7em;
-
+.input-container input:not(:placeholder-shown) + label {
+  top: 0.8em;
+  left: 2em;
+  font-size: 0.7em;
 }
 
-.form form{ 
-    /* animation: b ; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-input{
-    padding-block: 1em;
-    padding-inline: 3em;
-    margin: .5em;
-    border-radius: 1em;
-    border: none;
-    font-size: 1.3rem;
-    color: var(--input-color);
-    background-color: var(--container-bgcolor);
-    font-family: var(--title-font);
-    transition: transform 0.3s;
+.show-password-icon {
+  position: absolute;
+  top: 35%;
+  right: 3em;
+  cursor: pointer;
+  z-index: 1; /* Ensure the icon is above the input */
 }
 
-input .submit{
-   
-   align-self: center;
-   justify-self: center;
-}
-input.submit:hover{
-    transform: scale(1.05);
-    background-color: blueviolet;
-    cursor: pointer;
+.form form {
+  /* animation: b ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contents h3{
-    color: var(--heading-color);
-    font-family: var(--title-font);
-    text-align: center;
-}
-.contents h3 a{
-    color: var(--input-color);
-    font-family: var(--heading-font);
-    font-weight: 900;
-    font-size: 1.3em;
-    transition: color 0.3s, transform 0.4s;
-}
-h3 a:hover{
-    
-    color: rgba(132, 0, 255, 0.959);
+input {
+  padding-block: 1em;
+  padding-inline: 3em;
+  margin: 0.5em;
+  border-radius: 1em;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--input-color);
+  background-color: var(--container-bgcolor);
+  font-family: var(--title-font);
+  transition: transform 0.3s;
+  position: relative;
 }
 
-@media (max-width: 40em){
-    html{
-        font-size: .8em;
-    }
-    .container::after{
-        display: none;
-    }
-    .container::before{
-        display: none;
-    }
-    .input-container label{
-        font-size: 1em;
-        position: absolute;
-        left: 1.5em;
-        top: 1.5em;
-        transition: 0.2s;
-        pointer-events: none;
-    }
-    .logo h2{
-        font-size: 1em;
-    }.logo img{
-        width: 1em;
-    }
-    input{
-        font-size: 1em;
-    }
-    #error-message{
-        font-size: 8px;
-    }
+input.submit {
+  align-self: center;
+  justify-self: center;
+}
+
+input.submit:hover {
+  transform: scale(1.05);
+  background-color: blueviolet;
+  cursor: pointer;
+}
+
+.contents h3 {
+  color: var(--heading-color);
+  font-family: var(--title-font);
+  text-align: center;
+}
+.contents h3 a {
+  color: var(--input-color);
+  font-family: var(--heading-font);
+  font-weight: 900;
+  font-size: 1.3em;
+  transition: color 0.3s, transform 0.4s;
+}
+h3 a:hover {
+  color: rgba(132, 0, 255, 0.959);
+}
+
+@media (max-width: 40em) {
+  html {
+    font-size: 0.8em;
+  }
+  .container::after {
+    display: none;
+  }
+  .container::before {
+    display: none;
+  }
+  .input-container label {
+    font-size: 1em;
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    transition: 0.2s;
+    pointer-events: none;
+  }
+  .logo h2 {
+    font-size: 1em;
+  }
+  .logo img {
+    width: 1em;
+  }
+  input {
+    font-size: 1em;
+  }
+  #error-message {
+    font-size: 8px;
+  }
 }
 
 @keyframes loadingmenu {
-    0%{
-        opacity: 0;
-        transform: translateY(-17em);
-        transition: ease-in-out;
-    }
-    50%{
-        opacity: .5;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-17em);
+    transition: ease-in-out;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@keyframes moveshape{
-    from{
-        left: 2em;
-        transform: translateY(0);
-    }
-    to{
-        left: 4em;
-        transform: translateY(10em);
-    }
+@keyframes moveshape {
+  from {
+    left: 2em;
+    transform: translateY(0);
+  }
+  to {
+    left: 4em;
+    transform: translateY(10em);
+  }
 }
-@keyframes movedown{
-    from{
-        right: 0;
-        transform: translateY(0);
-    }
-    to{
-        right: 5em;
-        transform: translateY(.8em);
-    }
+@keyframes movedown {
+  from {
+    right: 0;
+    transform: translateY(0);
+  }
+  to {
+    right: 5em;
+    transform: translateY(0.8em);
+  }
+}
+
+.non-visible{
+  display: none;
 }
