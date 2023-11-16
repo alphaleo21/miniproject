@@ -3,6 +3,12 @@
     $_POST = array();
     session_start();
 
+    // // If the user is not logged in, redirect to the login page
+    // if (!isset($_SESSION['username'])) {
+    //     header("Location: login.php");
+    //     exit;
+    // }
+
     // message in the session
     $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
     
@@ -54,7 +60,7 @@
             </div>
             <div class="link">
                 <img src="../icons/logout.svg" alt="">
-                <a href="" id="logout">Logout</a>
+                <a href="../php/logout.php" id="logout">Logout</a>
             </div>
         </div>
         <div class="menu-button" id="menu-button">
