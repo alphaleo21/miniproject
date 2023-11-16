@@ -52,16 +52,16 @@ document.getElementById('show-password').addEventListener('click', function() {
   passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
 });
 
-            // Get references to the images
-            var visibleImage = document.querySelector('.visible');
-            var nonVisibleImage = document.querySelector('.non-visible');
+  // Get references to the images
+document.addEventListener("DOMContentLoaded", function () {
+  var visibleImage = document.querySelector(".visible");
+  var nonVisibleImage = document.querySelector(".non-visible");
 
-            // Get reference to the div
-            var showPasswordDiv = document.getElementById('show-password');
+  var showPasswordDiv = document.getElementById("show-password");
 
-            // Add click event listener to the div
-            showPasswordDiv.addEventListener('click', function() {
-                // Toggle visibility of the images
-                visibleImage.classList.toggle('non-visible');
-                nonVisibleImage.classList.toggle('non-visible');
-            });
+
+  showPasswordDiv.addEventListener("click", function () {
+    visibleImage.classList.toggle("non-visible");
+    nonVisibleImage.classList.toggle("non-visible");
+  });
+});

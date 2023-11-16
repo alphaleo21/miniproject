@@ -19,6 +19,7 @@ font-family: 'Roboto Condensed', sans-serif; */
   padding: 0;
   text-decoration: none;
 }
+
 body {
   box-sizing: border-box;
   height: 100dvh;
@@ -31,11 +32,13 @@ body {
   color: var(--input-color);
   font-size: 1.2em;
 }
+
 h2 {
   font-family: var(--heading-font);
   font-size: var(--heading-size);
   color: var(--heading-color);
 }
+
 .container {
   /* background-color: var(--container-bgcolor); */
   min-height: 50%;
@@ -51,6 +54,7 @@ h2 {
   padding: 2em;
   box-shadow: 2em 4em 1em rgba(0, 0, 0, 0.2);
 }
+
 .container::before {
   content: "";
   width: 30vmax;
@@ -81,6 +85,7 @@ h2 {
   border-radius: 30% 70% 67% 33% / 30% 36% 64% 70%;
   animation: movedown 5s linear infinite alternate;
 }
+
 .logo a {
   position: absolute;
   top: 0;
@@ -141,7 +146,8 @@ h2 {
   top: 35%;
   right: 3em;
   cursor: pointer;
-  z-index: 1; /* Ensure the icon is above the input */
+  z-index: 1;
+  /* Ensure the icon is above the input */
 }
 
 .form form {
@@ -182,6 +188,7 @@ input.submit:hover {
   font-family: var(--title-font);
   text-align: center;
 }
+
 .contents h3 a {
   color: var(--input-color);
   font-family: var(--heading-font);
@@ -189,6 +196,7 @@ input.submit:hover {
   font-size: 1.3em;
   transition: color 0.3s, transform 0.4s;
 }
+
 h3 a:hover {
   color: rgba(132, 0, 255, 0.959);
 }
@@ -197,12 +205,15 @@ h3 a:hover {
   html {
     font-size: 0.8em;
   }
+
   .container::after {
     display: none;
   }
+
   .container::before {
     display: none;
   }
+
   .input-container label {
     font-size: 1em;
     position: absolute;
@@ -211,15 +222,19 @@ h3 a:hover {
     transition: 0.2s;
     pointer-events: none;
   }
+
   .logo h2 {
     font-size: 1em;
   }
+
   .logo img {
     width: 1em;
   }
+
   input {
     font-size: 1em;
   }
+
   #error-message {
     font-size: 8px;
   }
@@ -231,34 +246,46 @@ h3 a:hover {
     transform: translateY(-17em);
     transition: ease-in-out;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes moveshape {
   from {
     left: 2em;
     transform: translateY(0);
   }
+
   to {
     left: 4em;
     transform: translateY(10em);
   }
 }
+
 @keyframes movedown {
   from {
     right: 0;
     transform: translateY(0);
   }
+
   to {
     right: 5em;
     transform: translateY(0.8em);
   }
 }
 
+/* .visible{
+  display: block;
+}
 .non-visible{
+  display: block;
+} */
+.non-visible {
   display: none;
 }
