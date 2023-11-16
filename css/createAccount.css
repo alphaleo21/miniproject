@@ -280,12 +280,7 @@ h3 a:hover {
   }
 }
 
-/* .visible{
-  display: block;
-}
-.non-visible{
-  display: block;
-} */
+
 .non-visible {
   display: none;
 }
