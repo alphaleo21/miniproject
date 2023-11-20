@@ -251,3 +251,75 @@ input[type="radio"]:checked + label {
     }
 }
 
+/* Style for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Style for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            color: black;
+        }
+        .modal p {
+            color: black;
+        }
+      /* Style for the modal buttons */
+.modal button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: var(--title-font);
+}
+
+/* Style for the "Yes, Logout" button */
+button.yes-btn {
+    background: linear-gradient(to right, #f3704f, #ec9755);
+    color: #fff;
+}
+
+/* Hover style for the "Yes, Logout" button */
+button.yes-btn:hover {
+    background: linear-gradient(to right, #e95625, #e95625);
+    color: #fff;
+}
+
+/* Style for the "Cancel" button */
+button.cancel-btn {
+    background: linear-gradient(to right, #4b6cb7, #1b2e4a);
+    color: #fff;
+}
+
+/* Hover style for the "Cancel" button */
+button.cancel-btn:hover {
+    background: linear-gradient(to right, #39578b, #0f223b);
+    color: #fff;
+}

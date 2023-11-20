@@ -1,24 +1,25 @@
 <?php
 
-    $_POST = array();
-    session_start();
+$_POST = array();
+session_start();
 
-    // // If the user is not logged in, redirect to the login page
-    // if (!isset($_SESSION['username'])) {
-    //     header("Location: login.php");
-    //     exit;
-    // }
+// // If the user is not logged in, redirect to the login page
+// if (!isset($_SESSION['username'])) {
+//     header("Location: login.php");
+//     exit;
+// }
 
-    // message in the session
-    $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
-    
-    // Clear the message from the session to prevent it from displaying multiple times
-    unset($_SESSION['username']);
+// message in the session
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+
+// Clear the message from the session to prevent it from displaying multiple times
+unset($_SESSION['username']);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,7 @@
     <link rel="icon" href="../icons/codeHive.svg">
     <link rel="stylesheet" href="../css/student-project.css">
 </head>
+
 <body>
     <div class="container">
         <div class="side-nav" id="side-nav">
@@ -36,7 +38,7 @@
                 </div>
             </div>
             <div class="h-divider"></div>
-            
+
             <div class="link projects">
                 <img src="../icons/resource.svg" alt="">
                 <a href="../pages/student-project.html" id="projects">Projects</a>
@@ -58,10 +60,24 @@
                 <img src="../icons/setting.svg" alt="">
                 <a href="../pages/settings.html" id="setting">Settings</a>
             </div>
+
+            <!-- logout -->
+
             <div class="link">
                 <img src="../icons/logout.svg" alt="">
-                <a href="../php/logout.php" id="logout">Logout</a>
+                <a href="#" onclick="openModal()" id="logout">Logout</a>
             </div>
+
+            <!-- The modal -->
+            <div class="overlay" id="overlay" onclick="closeModal()"></div>
+            <div class="modal" id="modal">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <p>Are you sure you want to logout?</p>
+                <button class="yes-btn" onclick="confirmLogout()">Yes, Logout</button>
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+            </div>
+
+
         </div>
         <div class="menu-button" id="menu-button">
             <img src="../icons/menu.svg" alt="">
@@ -87,11 +103,11 @@
                     <div class="search-bar">
                         <form action="" method="POST">
                             <input type="search" placeholder="Search for projects here" name="search-projects" id="search-projects" required>
-                        <button type="submit">
-                            <div class="search-button">
-                                <img src="../icons/search.svg" alt="" id="form-icon">
-                            </div>
-                        </button>
+                            <button type="submit">
+                                <div class="search-button">
+                                    <img src="../icons/search.svg" alt="" id="form-icon">
+                                </div>
+                            </button>
                         </form>
                     </div>
                     <button class="filter" id="filter">
@@ -103,16 +119,16 @@
                     <form action="" method="POST" id="filter-form" class="filter-search">
                         <input type="radio" name="project-ugpg" id="ug" value="UG">
                         <label for="ug">UG</label>
-                        
+
                         <input type="radio" name="project-ugpg" id="pg" value="PG">
                         <label for="pg">PG</label>
-                        
+
                         <input type="radio" name="project-type" id="mini-project" value="Mini Project">
                         <label for="mini-project">Mini Project</label>
-                        
+
                         <input type="radio" name="project-type" id="main-project" value="Main Project">
                         <label for="main-project">Main Project</label>
-                        
+
                         <button type="submit">Apply</button>
                     </form>
                 </div>
@@ -128,7 +144,7 @@
                             </div>
                             <div class="author">
                                 <h5>Author</h5>
-                                
+
                             </div>
                             <div class="lang-used">
                                 <h5>Languages</h5>
@@ -142,7 +158,7 @@
                             <p>project description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequuntur fugit hic assumenda! Perferendis recusandae et adipisci quae</p>
                             <div class="author">
                                 <h5>Author</h5>
-                                
+
                             </div>
                             <div class="lang-used">
                                 <h5>Languages</h5>
@@ -156,7 +172,7 @@
                             <p>project description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequuntur fugit hic assumenda! Perferendis recusandae et adipisci quae</p>
                             <div class="author">
                                 <h5>Author</h5>
-                                
+
                             </div>
                             <div class="lang-used">
                                 <h5>Languages</h5>
@@ -170,7 +186,7 @@
                             <p>project description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequuntur fugit hic assumenda! Perferendis recusandae et adipisci quae</p>
                             <div class="author">
                                 <h5>Author</h5>
-                                
+
                             </div>
                             <div class="lang-used">
                                 <h5>Languages</h5>
@@ -180,7 +196,7 @@
                     </div>
                     <div class="project-box">
                         <div class="file-content">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -194,7 +210,7 @@
                             <p>project description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consequuntur fugit hic assumenda! Perferendis recusandae et adipisci quae</p>
                             <div class="author">
                                 <h5>Author</h5>
-                                
+
                             </div>
                             <div class="lang-used">
                                 <h5>Languages</h5>
@@ -204,22 +220,22 @@
                     </div>
                     <div class="project-box">
                         <div class="file-content">
-                            
+
                         </div>
                     </div>
                     <div class="project-box">
                         <div class="file-content">
-                            
+
                         </div>
                     </div>
                     <div class="project-box">
                         <div class="file-content">
-                            
+
                         </div>
                     </div>
                     <div class="project-box">
                         <div class="file-content">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -229,4 +245,5 @@
     <script src="../js/user-page.js"></script>
     <script src="../js/student-project.js"></script>
 </body>
+
 </html>
