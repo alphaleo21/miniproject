@@ -12,13 +12,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
 
@@ -35,8 +32,9 @@
             </div>
             <div class="options">
                 <h2><a href="#about-us">About Us</a></h2>
-                <a href="pages/createAccount.php"><button id="button-get-started">Get Started</button></a>
-                <button class="login-button"><a href="pages/login.php">Log In</a></button>
+                <button id="button-get-started" class="login_button"><a href="createAccount.php">Get Started</a></button>
+                <button class="login-button"><a href="login.php">Log In</a></button>
+                <button class="login-button"><a href="admin">admin logIn</a></button>
             </div>
 
             <div class="menu">
@@ -50,55 +48,34 @@
             <section id="home-main">
                 <div class="option-menu-list" id="option-menu-list">
                     <a href="#about-us">About Us</a>
-                    <a href="pages/createAccount.php"><button id="button-get-started">Get Started</button></a>
-                    <a href="pages/login.php">Log In</a>
+                    <a href="createAccount.php">Get Started</a>
+                    <a href="login.php">Log In</a>
+                    <a href="admin">admin logIn</a>
                 </div>
                 <div class="description">
                     <h2>CodeHive: Ignite, Innovate, Inspire.</h2>
                     <p>Empower your college journey with CodeHive.
                         Upload your projects, propose fresh ideas, and contribute to
                         a valuable resource hub for the coding community.</p>
-                         
-                    <!-- <a href="pages/createAccount.php"><button id="button-get-started">Get Started</button></a> -->
                 </div>
 
                 <!-- search bar -->
 
                 <div class="search-form">
-                <div class="search-filter">
-                    <div class="search-bar">
-                        <form action="" method="POST">
-                            <input type="search" placeholder="Search for projects here" name="search-projects" id="search-projects" required>
-                            <button type="submit">
-                                <div class="search-button">
-                                    <img src="icons/search.svg" alt="" id="form-icon">
-                                </div>
-                            </button>
-                        </form>
+                    <div class="search-filter">
+                        <div class="search-bar">
+                            <form action="" method="POST">
+                                <input type="search" placeholder="Search for projects here" name="search-projects" id="search-projects" required>
+                                <button type="submit">
+                                    <div class="search-button">
+                                        <img src="icons/search.svg" alt="" id="form-icon">
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                        
                     </div>
-                    <button class="filter" id="filter">
-                        <h3>Filter</h3>
-                        <img src="icons/filter.svg" alt="">
-                    </button>
                 </div>
-                <div class="filter-search" id="filter-search">
-                    <form action="" method="POST" id="filter-form" class="filter-search">
-                        <input type="radio" name="project-ugpg" id="ug" value="UG">
-                        <label for="ug">UG</label>
-
-                        <input type="radio" name="project-ugpg" id="pg" value="PG">
-                        <label for="pg">PG</label>
-
-                        <input type="radio" name="project-type" id="mini-project" value="Mini Project">
-                        <label for="mini-project">Mini Project</label>
-
-                        <input type="radio" name="project-type" id="main-project" value="Main Project">
-                        <label for="main-project">Main Project</label>
-
-                        <button type="submit">Apply</button>
-                    </form>
-                </div>
-            </div>
             </section>
             <section class="about-us" id="about-us">
                 <div class="content-in-about-us">

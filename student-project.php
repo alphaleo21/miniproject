@@ -24,67 +24,16 @@ unset($_SESSION['username']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeHive</title>
-    <link rel="icon" href="../icons/codeHive.svg">
-    <link rel="stylesheet" href="../css/student-project.css">
+    <link rel="icon" href="icons/codeHive.svg">
+    <link rel="stylesheet" href="css/student-project.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="side-nav" id="side-nav">
-            <div class="section-1">
-                <div id="username"><?php echo $username ?></div>
-                <div class="cross" id="cross">
-                    <img src="../icons/cross.svg" alt="">
-                </div>
-            </div>
-            <div class="h-divider"></div>
-
-            <div class="link projects">
-                <img src="../icons/resource.svg" alt="">
-                <a href="../pages/student-project.html" id="projects">Projects</a>
-            </div>
-            <div class="link">
-                <img src="../icons/idea.svg" alt="">
-                <a href="../pages/student-idea-submission.html" id="idea-submission">Idea Submission</a>
-            </div>
-            <div class="link">
-                <img src="../icons/upload.svg" alt="">
-                <a href="../pages/student-uploads.html" id="your-projects">Your Uploads</a>
-            </div>
-            <div class="link">
-                <img src="../icons/bell.svg" alt="">
-                <a href="../pages/student-notification.html" id="notification">Notifications</a>
-            </div>
-            <div class="h-divider"></div>
-            <div class="link">
-                <img src="../icons/setting.svg" alt="">
-                <a href="../pages/settings.html" id="setting">Settings</a>
-            </div>
-
-            <!-- logout -->
-
-            <div class="link">
-                <img src="../icons/logout.svg" alt="">
-                <a href="#" onclick="openModal()" id="logout">Logout</a>
-            </div>
-
-            <!-- The modal -->
-            <div class="overlay" id="overlay" onclick="closeModal()"></div>
-            <div class="modal" id="modal">
-                <span class="close-btn" onclick="closeModal()">&times;</span>
-                <p>Are you sure you want to logout?</p>
-                <button class="yes-btn" onclick="confirmLogout()">Yes, Logout</button>
-                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
-            </div>
-
-
-        </div>
-        <div class="menu-button" id="menu-button">
-            <img src="../icons/menu.svg" alt="">
-        </div>
+        <?php include_once('includes/sidebar.php'); ?>
         <header>
             <div class="user">
-                <img src="../icons/account.svg" alt="">
+                <img src="icons/account.svg" alt="">
                 <h2>Student</h2>
             </div>
             <div class="right-side-links">
