@@ -2,27 +2,23 @@
     <div class="section-1">
         <div id="username">User</div>
         <div class="cross" id="cross">
-            <img src="../icons/cross.svg" alt="">
+            <img src="icons/cross.svg" alt="">
         </div>
     </div>
     <div class="h-divider"></div>
 
     <div class="link">
         <img src="icons/resource.svg" alt="">
-        <a href="student-project.html" id="projects">Projects</a>
+        <a href="Dashboard.php" id="projects">Dashboard</a>
     </div>
     <div class="link idea-submission">
         <img src="icons/idea.svg" alt="">
-        <a href="student-idea-submission.php" id="idea-submission">Idea Submission</a>
+        <a href="idea-submission.php" id="idea-submission">Idea Submission</a>
     </div>
     <div class="link">
         <img src="icons/upload.svg" alt="">
-        <a href="student-uploads.html" id="your-projects">Your Uploads</a>
-    </div>
-    <div class="link">
-        <img src="icons/bell.svg" alt="">
-        <a href="pages/student-notification.html" id="notification">Notifications</a>
-    </div>
+        <a href="project-uploads.php" id="your-projects">Upload Project</a>
+    </div> 
     <div class="h-divider"></div>
     <div class="link">
         <img src="icons/setting.svg" alt="">
@@ -30,7 +26,7 @@
     </div>
     <div class="link">
         <img src="icons/logout.svg" alt="">
-        <a href="" id="logout">Logout</a>
+        <a href="logout.php" id="logout">Logout</a>
     </div>
 </div>
 <div class="menu-button" id="menu-button">

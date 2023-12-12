@@ -9,15 +9,14 @@ if (isset($_POST['submit'])) {
   $dec_password = md5($password);
   $batch = $_POST['batch'];
 
-  // created time
-  $created_at = date("Y-m-d H:i:s");
+
 
   $sql = mysqli_query($con, "SELECT user_id FROM Users where email='$email'");
   $row = mysqli_num_rows($sql);
   if ($row > 0) {
     echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
   } else {
-    $msg = mysqli_query($con, "INSERT INTO Users(username,email,password,batch,created_at) VALUES('$username','$email','$dec_password','$batch','$created_at')");
+    $msg = mysqli_query($con, "INSERT INTO Users(username,email,password,batch) VALUES('$username','$email','$dec_password','$batch')");
 
     if ($msg) {
       echo "<script>alert('Registered successfully');</script>";

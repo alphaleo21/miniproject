@@ -214,16 +214,6 @@ input[type="radio"]:checked + label {
     transform: translateY(-5px); /* Move the box up slightly on hover */
 }
 
-/* new uploads */
-
-.new-uploads{
-    display: flex;
-    flex-direction: column;
-}
-.new-uploads h2{
-    font-weight: 100;
-}
-
 @media (max-width: 40em){
     .search-form{
         width: fit-content;
