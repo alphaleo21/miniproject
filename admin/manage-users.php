@@ -5,8 +5,8 @@ if (strlen($_SESSION['adminid'] == 0)) {
 } else {
     // for deleting user
     if (isset($_GET['id'])) {
-        $adminid = $_GET['id'];
-        $msg = mysqli_query($con, "delete from users where id='$adminid'");
+        $user_id = $_GET['id'];
+        $msg = mysqli_query($con, "DELETE FROM Users WHERE user_id='$user_id'");
         if ($msg) {
             echo "<script>alert('Data deleted');</script>";
         }
@@ -58,38 +58,25 @@ if (strlen($_SESSION['adminid'] == 0)) {
                         <?php
 
                         $search = $_POST['search'];
+                        // Build and execute a SQL query
+                        $sql = "SELECT * FROM Users WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
+                        $result = mysqli_query($con, $sql);
 
-                        if (isset($_GET['search-users'])) {
-                            $sql = "SELECT * FROM Users WHERE username LIKE '$search' OR email LIKE '$search'";
-                            $result = mysqli_query($con, $sql);
-
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo '<tr>';
-                                echo '<td>' . $row['user_id'] . '</td>';
-                                echo '<td>' . $row['username'] . '</td>';
-                                echo '<td>' . $row['email'] . '</td>';
-                                echo '<td>' . $row['role'] . '</td>';
-                                echo '<td>' . $row['batch'] . '</td>';
-                                echo '<td><a href="edit_user.php?id=' . $row['user_id'] . '">Edit</a> | <a href="delete_user.php?id=' . $row['user_id'] . '">Delete</a></td>';
-                                echo '</tr>';
-                            }
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '<tr>';
+                            echo '<td>' . $row['user_id'] . '</td>';
+                            echo '<td>' . $row['username'] . '</td>';
+                            echo '<td>' . $row['email'] . '</td>';
+                            echo '<td>' . $row['role'] . '</td>';
+                            echo '<td>' . $row['batch'] . '</td>';
+                            echo "<td>";
+                            echo "<a href='user-profile.php?uid={$row['id']}'>Edit</a>";
+                            echo "|";
+                            echo "<a href='manage-users.php?id={$row['user_id']}' onClick=\"return confirm('Do you really want to delete');\">Delete</a>";
+                            echo "</td>";
+                            echo '</tr>';
                         }
-                        else{
-                            // Build and execute a SQL query
-                            $sql = "SELECT * FROM Users WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
-                            $result = mysqli_query($con, $sql);
 
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo '<tr>';
-                                echo '<td>' . $row['user_id'] . '</td>';
-                                echo '<td>' . $row['username'] . '</td>';
-                                echo '<td>' . $row['email'] . '</td>';
-                                echo '<td>' . $row['role'] . '</td>';
-                                echo '<td>' . $row['batch'] . '</td>';
-                                echo '<td><a href="edit_user.php?id=' . $row['user_id'] . '">Edit</a> | <a href="delete_user.php?id=' . $row['user_id'] . '">Delete</a></td>';
-                                echo '</tr>';
-                            }
-                        }
                         ?>
                     </tbody>
                 </table>
