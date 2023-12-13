@@ -21,6 +21,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CodeHive</title>
         <link rel="icon" href="..icons/codeHive.svg">
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="../css/manage-users.css">
     </head>
 
@@ -70,7 +71,7 @@ if (strlen($_SESSION['adminid'] == 0)) {
                             echo '<td>' . $row['role'] . '</td>';
                             echo '<td>' . $row['batch'] . '</td>';
                             echo "<td>";
-                            echo "<a href='user-profile.php?uid={$row['id']}'>Edit</a>";
+                            echo "<a href='edit-user.php?uid={$row['user_id']}'>Edit</a>";
                             echo "|";
                             echo "<a href='manage-users.php?id={$row['user_id']}' onClick=\"return confirm('Do you really want to delete');\">Delete</a>";
                             echo "</td>";
@@ -83,6 +84,11 @@ if (strlen($_SESSION['adminid'] == 0)) {
             </div>
         </div>
         <script src="../js/user-page.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="../js/datatables-simple-demo.js"></script>
     </body>
 
     </html>
