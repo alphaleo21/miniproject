@@ -7,9 +7,9 @@ if (isset($_POST['login'])) {
     $ret = mysqli_query($con, "SELECT * FROM Users WHERE username='$adminusername' and password='$pass' and role = 'admin'");
     $num = mysqli_fetch_array($ret);
     if ($num > 0) {
-        $extra = "admin.html";
+        $extra = "admin.php";
         $_SESSION['login'] = $_POST['username'];
-        $_SESSION['adminid'] = $num['id'];
+        $_SESSION['adminid'] = $num['user_id'];
         echo "<script>window.location.href='" . $extra . "'</script>";
         exit();
     } else {

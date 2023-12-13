@@ -1,11 +1,11 @@
 <?php
 session_start();
-include_once('../includes/config.php');
+include_once('includes/config.php');
 
 if (strlen($_SESSION['id']) == 0) {
     header('location:logout.php');
 } else {
-    // Code for User Creation
+    // Code for project Creation
     if (isset($_POST['project'])) {
         $user_id = $_SESSION['id'];
         $project_name = $_POST['project_name'];
@@ -18,7 +18,7 @@ if (strlen($_SESSION['id']) == 0) {
 
         if ($query) {
             echo "<script>alert('category created successfully');</script>";
-            echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+            echo "<script type='text/javascript'> document.location = 'Dashboard.php'; </script>";
         } else {
             echo "<script>alert('Error creating category');</script>";
         }
