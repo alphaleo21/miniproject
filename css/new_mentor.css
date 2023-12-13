@@ -1,0 +1,100 @@
+@import '../includes/user-page.css';
+
+/* Reset some default styles */
+body, h1, h2, h3, p, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#mySvg {
+    fill: #ff0000; /* Change to the desired color */
+}
+
+
+/* Style for the main container */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f5;
+}
+
+/* Style for the form container */
+.form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the input container */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the labels */
+.input-container label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555555;
+    font-size: 14px;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+/* Style to hide the label when input is not empty */
+.input-container input:not(:placeholder-shown) + label {
+    top: 25%;
+    font-size: 8px;
+}
+
+/* Style for the visible and non-visible password icons */
+.show-password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.show-password-icon img {
+    width: 20px;
+    height: auto;
+}
+
+/* Style for the submit button */
+.submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover style for the submit button */
+.submit:hover {
+    background-color: #0056b3;
+}
