@@ -9,11 +9,11 @@
 
     <div class="link dashboard">
         <img src="../icons/home.svg" alt="">
-        <a href="../admin/admin.html" id="projects">Dashboard</a>
+        <a href="../admin/admin.php" id="projects">Dashboard</a>
     </div>
     <div class="link">
         <img src="../icons/account.svg" alt="">
-        <a href="../admin/manage-users.html" id="idea-submission">Manage Users</a>
+        <a href="../admin/manage-users.php" id="idea-submission">Manage Users</a>
     </div>
     <div class="link">
         <img src="../icons/resource.svg" alt="">
@@ -21,7 +21,7 @@
     </div>
     <div class="link">
         <img src="../icons/bell.svg" alt="">
-        <a href="" id="notification">Notifications</a>
+        <a href="../admin/new-mentor.php" id="add_mentor">New Mentor</a>
     </div>
     <div class="h-divider"></div>
     <div class="link">
