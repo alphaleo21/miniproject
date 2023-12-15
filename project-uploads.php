@@ -13,17 +13,41 @@ if (strlen($_SESSION['id']) == 0) {
         $status = $_POST['status'];
         $keywords = $_POST['keywords'];
 
-        $query = mysqli_query($con, "INSERT INTO Projects (user_id, project_name, description, status, keywords)
-                                    VALUES ($user_id, '$project_name', '$description', '$status', '$keywords')");
+        $file_name = $_FILES['file']['name'];
+        $file_size = $_FILES['file']['size'];
+        //tmp_name ---	A temporary address where the file is located before processing the upload request
+        $file_tmp = $_FILES['file']['tmp_name'];
+        $file_type = $_FILES['file']['type'];
+        $tmp = explode('.', $file_name);
+        $file_ext = end($tmp);
+        $extensions = "zip";
 
-        if ($query) {
-            echo "<script>alert('category created successfully');</script>";
-            echo "<script type='text/javascript'> document.location = 'Dashboard.php'; </script>";
-        } else {
-            echo "<script>alert('Error creating category');</script>";
+        // Allow certain file formats
+
+        if ($file_ext === $extensios) {
+            echo "This extension isn't allowed , please choose a jpg,jpeg or png file.";
+            die();
+        } 
+        else {
+            //if error not occurs than this will run so we can make 
+            $error = false;
+            // if every things is okay than move pic to upload (file going to be sent,destination where file is saved)
+            move_uploaded_file($file_tmp,"upload/". $file_name);
         }
     }
-}
+
+    if ($error === false) {
+                $query = mysqli_query($con, "INSERT INTO Projects (user_id, project_name, description, status, file, keywords)
+                                    VALUES ($user_id, '$project_name', '$description', '$status', '$file_name', '$keywords')");
+
+                if ($query) {
+                    echo "<script>alert('Project upload successfully');</script>";
+                    echo "<script type='text/javascript'> document.location = 'project-uploads.php'; </script>";
+                } else {
+                    echo "<script>alert('Error creating Uploads');</script>";
+                }
+            } 
+        }
 ?>
 
 
@@ -64,7 +88,7 @@ if (strlen($_SESSION['id']) == 0) {
                     <input type="text" id="keywords" name="keywords"><br><br>
 
                     <label for="project_file">Project File (Upload):</label>
-                    <input type="file" id="project_file" name="project_file" accept=".zip, .rar"><br><br>
+                    <input type="file" id="file" name="file" accept=".zip"><br><br>
 
                     <input type="submit" name="project" value="Upload Project">
                 </form>

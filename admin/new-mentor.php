@@ -61,10 +61,6 @@ if (strlen($_SESSION['adminid']) == 0) {
                         <label for="email">Email</label>
                     </div>
                     <div class="input-container">
-                        <input type="text" id="batch" name="batch" placeholder="" required />
-                        <label for="batch">Batch</label>
-                    </div>
-                    <div class="input-container">
                         <input type="password" id="password" name="password" placeholder="" required />
                         <label for="password">Password</label>
 
